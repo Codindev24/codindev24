@@ -1,0 +1,128 @@
+@import './base/colors.scss';
+@import './base/mixins.scss';
+
+
+.weather {
+  background: white;
+  min-width:860px !important;
+  
+ .search {
+  padding: 2px;
+  border: none !important;
+  text-shadow: none !important;
+ 
+ input {
+  background: rgba($color: gray, $alpha: .1);
+  color: $dark !important;
+  font-size: 14px;
+  text-align: center;
+  min-width: 100% !important;
+  outline: none;
+  padding: .5rem 1rem;
+  margin-top: -2px;
+  border: 1px solid rgba($color: gray, $alpha: .1) !important;
+  border-radius: 30px;
+  text-shadow: none !important;
+ 
+ &::selection {
+  border: none !important;
+  text-shadow: none !important;
+ }// &::selection
+ 
+ &::active {
+  border: none !important;
+  text-shadow: none !important;
+ }// &::selection 
+ 
+ }// input
+ 
+ }// .search
+
+ ///////////////////////////// vedrid ///////////////////////
+.vedrid {
+ background: white; 
+ min-width:860px !important;
+ //border-top: 2px solid $lpurple;
+ //border-bottom: 1px solid $lpurple;
+ 
+ ///////////////////////////// left ///////////////////////
+.left {
+ width: 100%;
+ padding: 5px;
+
+ul.nameheatclouds {
+
+span {
+  
+li {
+ color: $dark;
+ float: left;
+ font-size: 18px;
+ font-weight: 300;
+ @include source;
+ padding-right: 4px;
+ padding-left: 3px;
+
+&.name {
+ font-weight: 600;
+}// &.name 
+   
+&.c {
+ color: rgba($color: $llpurple, $alpha: .8);
+ font-weight: 600;
+}// &.c
+
+&.feels {
+ color: rgba($color: $llpurple, $alpha: .8);
+ font-weight: 600;
+}// &.feels
+
+&.snow {
+ color: rgba($color: $llpurple, $alpha: .8);  
+ font-weight: 600;
+}// &,snow
+
+&.w {
+ color: rgba($color: $llpurple, $alpha: .8);
+ font-weight: 600;
+
+p {
+
+span.wind {
+ color: $dark;
+}// span.wind
+
+}// p
+
+}// &.w
+
+&.hum {
+ color: rgba($color: $llpurple, $alpha: .8);  
+ font-weight: 600;
+
+p {
+
+span.hum {
+ color: $dark;
+}// span.hum
+
+}// p 
+
+}// &.hum
+
+span.cels {
+ color: $dark;
+ margin-left: 3px;
+}// span.cels
+
+}// li
+  
+}// span
+  
+}// ul.nameheatclouds
+
+}// .left
+
+}// .vedrid
+
+}// .weather

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../sass/navbar.scss';
+import '../sass/weather.scss';
+import Weather from "./Weather.tsx";
 
 export default function Navbar() {
   return (
@@ -46,32 +48,14 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Valcono Data</a>
+        <a className="btn btn-ghost text-xl">
+        C<span>odin</span>dev
+        </a>
       </div>
       {/* .navbar-start */}
 
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <details>
-              <summary>Tyvek/Typar</summary>
-              <ul className="p-2 absolute z-20">
-                <li>
-                  <a>Make a Siding</a>
-                </li>
-                <li>
-                  <a>What we Provide</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Tyvek/Typar</a>
-          </li>
-        </ul>
+      <Weather />
       </div>
       {/* .navbar-center */}
 
