@@ -1,0 +1,15 @@
+@import './base/colors';
+@import './base/mixins.scss';
+
+.footer {
+  background: $dark;
+
+  h1 {
+    color: white;
+    @include source;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px;
+  } // h1
+} // .footer

@@ -1,0 +1,16 @@
+@mixin roboto {
+    font-family: 'Roboto Flex', sans-serif !important;
+  } // roboto
+  
+  @mixin source {
+    font-family: 'Source Sans Pro', sans-serif !important;
+  } // source
+  
+  @mixin sans {
+    font-family: 'Open Sans', sans-serif !important;
+  }
+  
+  @mixin raleway {
+    font-family: 'Raleway', sans-serif !important;
+  }
+  

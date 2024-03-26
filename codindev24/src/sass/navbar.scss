@@ -1,0 +1,111 @@
+@import './base/base.scss';
+@import './base/colors';
+@import './base/mixins.scss';
+
+.navbar {
+  .navbar-start {
+    .dropdown {
+      label {
+        background: none !important;
+        input {
+        } // input
+        svg {
+          color: $llpurple !important;
+          &.close {
+            color: red !important;
+          } // &.close
+          .open {
+            color: red !important;
+          } // &.open
+        } // svg
+      } // label
+      .btn {
+        &:hover {
+          background: $lpurple;
+          color: white;
+        } //&:hover
+        svg {
+        } // svg
+      } // .btn
+
+      ul.menu {
+        li {
+          a {
+            min-width: 150px !important;
+
+            &:hover {
+              background: $lpurple;
+              color: white;
+            } //&:hover
+          } // a
+
+          ul.p-2 {
+            li {
+              a {
+              } // a
+            } // li
+          } // ul..p-2
+        } // li
+      } // ul.menu
+    } // .dropdown
+
+    a.btn {
+      img {
+        width: 32px !important;
+        height: 32px !important;
+      } // img
+    } // a.btn
+  } // .navbar-start
+
+  .navbar-center {
+    ul.menu {
+      li {
+        a {
+          &:hover {
+            background: $lpurple;
+            color: white;
+          } //&:hover
+        } // a
+
+        details {
+          summary {
+            &:hover {
+              background: $lpurple;
+              color: white;
+            } //&:hover
+          } // summary
+
+          ul.p-2 {
+            li {
+              a {
+                min-width: 150px !important;
+              } //a
+            } // li
+          } // ul.p-2
+        } // details
+      } // li
+    } //ul.menu
+  } // .navbar-center
+
+  .navbar-end {
+    button {
+      background: $llpurple;
+      color: white;
+      @include roboto;
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      border: 1px solid rgba($color: gray, $alpha: 0.1);
+      border-radius: 5px;
+
+      &:hover {
+        background: $lpurple;
+        color: $llpurple;
+        font-size: 18px;
+        font-weight: 700 !important;
+        border: 3px solid $llpurple;
+      } // &:hover
+    } // a.btn
+  } // .navbar-end
+} // .navbar
