@@ -2,6 +2,7 @@ import {React, useState, useEffect} from 'react';
 import axios from 'axios';
 
 
+
 function Navbar() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
