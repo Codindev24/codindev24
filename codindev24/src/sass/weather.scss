@@ -10,7 +10,7 @@
   padding: 2px;
   border: none !important;
   text-shadow: none !important;
- 
+
  input {
   background: rgba($color: gray, $alpha: .1);
   color: $dark !important;
@@ -40,8 +40,12 @@
 
  ///////////////////////////// vedrid ///////////////////////
 .vedrid {
- background: white; 
+ background: rgba($color: $llpurple, $alpha: .7); 
  min-width:860px !important;
+ border: 1px solid rgba($color: gray, $alpha: .1) !important;
+ padding-left: 5px;
+ padding-right: 5px;
+ border-radius: 30px;
  //border-top: 2px solid $lpurple;
  //border-bottom: 1px solid $lpurple;
  
@@ -63,42 +67,62 @@ li {
  padding-right: 4px;
  padding-left: 3px;
 
+span {
+ color: $dark;
+
+&.tempdata {
+ color: white;
+}// &.tempdata
+
+}// span
+
 &.name {
- font-weight: 600;
+ color: white;
+ font-weight: 400;
 }// &.name 
    
 &.c {
- color: rgba($color: $llpurple, $alpha: .8);
+ color: rgba($color: white, $alpha: .8);
  font-weight: 600;
 }// &.c
 
 &.feels {
- color: rgba($color: $llpurple, $alpha: .8);
+ color: rgba($color: $dark, $alpha: .8);
  font-weight: 600;
+
+span.feelsdata {
+ color: white;
+}// span.feelsdata
+
 }// &.feels
 
 &.snow {
- color: rgba($color: $llpurple, $alpha: .8);  
+ color: white;  
  font-weight: 600;
 }// &,snow
 
 &.w {
- color: rgba($color: $llpurple, $alpha: .8);
+ color: rgba($color: $dark, $alpha: .8);
  font-weight: 600;
 
 p {
 
 span.wind {
  color: $dark;
+
 }// span.wind
+
+span.winddata {
+ color: white;
+}// &.winddata 
 
 }// p
 
 }// &.w
 
 &.hum {
- color: rgba($color: $llpurple, $alpha: .8);  
- font-weight: 600;
+ color: white;  
+ font-weight: 400;
 
 p {
 
@@ -110,6 +134,21 @@ span.hum {
 
 }// &.hum
 
+&.sun {
+ font-weight: 400;
+
+span.sun {
+color: $dark;
+}// span.sun
+
+}// &.sun
+
+svg {
+ width: 18px;
+ height: 18px;
+ margin-top: -2px;
+}// svg
+
 span.cels {
  color: $dark;
  margin-left: 3px;
@@ -120,6 +159,72 @@ span.cels {
 }// span
   
 }// ul.nameheatclouds
+
+ul.below {
+ margin-top: -15px !important;
+
+li {
+ color: $dark;
+ float: left;
+ font-size: 18px;
+ font-weight: 600;
+ @include source;
+ padding-right: 10px;
+ padding-left: 10px;
+
+&.cmin {
+
+}// .cmin
+
+&.cmax {
+
+}// &.cmax
+
+&.sea {
+
+}// &.sea
+
+&.windgust {
+
+p {
+
+span {
+
+&.wind {
+
+}// &.wind
+
+&.winddata {
+ color: white;
+}// &.winddata
+
+}// span
+
+}// p
+
+}// &.windgust
+
+
+
+span {
+
+&.tempdatamin {
+ color: white;
+}// &.tempdatamin
+
+&.tempdatamax {
+ color: white;
+}// &.tempdatamax
+
+&.cels {
+ color: $dark;;
+}// &.celd
+
+}// span
+
+}// li
+ 
+}// ul.below
 
 }// .left
 
