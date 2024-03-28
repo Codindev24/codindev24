@@ -1,0 +1,67 @@
+@import './base/colors.scss';
+@import './base/mixins.scss';
+
+.notes {
+
+
+.notepost {
+
+.notetitle {
+ color: white;
+ @include source;
+ font-size: 24px;
+ text-align: center;
+ padding: 20px;
+ 
+}// .notetitle
+
+.note {
+ background: white;
+ //border-bottom: 1px solid rgba($color: gray, $alpha: .3);
+
+.title {
+ color: $llpurple;
+ @include source;
+ padding: 15px;
+ 
+a {
+ text-decoration: none;
+
+&:hover {
+ color: $llpurple;
+}// &:hover 
+
+}// a
+
+}// .title
+
+.date {
+ @include source;
+ font-weight: 300;
+ padding: 15px;
+
+time.date {
+ 
+}// time.date
+
+}// .date
+
+.clock {
+ @include source;
+ font-weight: 300;
+ padding: 15px;
+
+time.timi {
+ color: $lpurple;
+ padding-right: 10px;
+}// time.timi
+
+}// clock
+
+}// .note
+
+
+}// .notepost
+
+
+}// .notes
