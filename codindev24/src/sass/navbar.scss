@@ -50,10 +50,13 @@
     } // .dropdown
 
     a.btn {
-      img {
-        width: 32px !important;
-        height: 32px !important;
-      } // img
+      font-size: 24px;
+      margin-top: -7px;
+      span {
+      color: $llpurple !important;
+      margin-left: -8px;
+      margin-right: -8px;
+      }// span
     } // a.btn
   } // .navbar-start
 

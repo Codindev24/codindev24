@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
 import useSWR from 'swr';
 import Swr from './Swr.tsx';
+import Notes from './components/Notes.tsx';
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
         strength={200}
       >
         <div className="content flex justify-center">
-          <Swr />
+          <Notes />
+          {/* <Swr /> */}
         </div>
         {/* .content */}
       </Parallax>

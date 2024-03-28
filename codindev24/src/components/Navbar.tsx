@@ -60,7 +60,7 @@ export default function Navbar() {
       {/* .navbar-center */}
 
       <div className="navbar-end">
-        <button>Hire us</button>
+        <button>Login</button>
       </div>
       {/* .navbar-end */}
     </div>
