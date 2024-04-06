@@ -5,8 +5,11 @@
 .weather {
   background: white;
   min-width:860px !important;
+  margin-top: -54px;
+  padding-bottom: 5px;
   
  .search {
+  min-width: 50% !important;
   padding: 2px;
   border: none !important;
   text-shadow: none !important;
@@ -40,12 +43,14 @@
 
  ///////////////////////////// vedrid ///////////////////////
 .vedrid {
- background: rgba($color: $llpurple, $alpha: .7); 
+ background: rgba($color: $dark, $alpha: .6); 
  min-width:860px !important;
  border: 1px solid rgba($color: gray, $alpha: .1) !important;
  padding-left: 5px;
  padding-right: 5px;
- border-radius: 30px;
+ margin-top: 8px;
+ margin-bottom: -6px !important;
+ box-shadow: 3px 1px 3px $lpurple;
  //border-top: 2px solid $lpurple;
  //border-bottom: 1px solid $lpurple;
  
@@ -59,19 +64,23 @@ ul.nameheatclouds {
 span {
   
 li {
- color: $dark;
+ color: white;
  float: left;
  font-size: 18px;
- font-weight: 300;
+ font-weight: 600;
+ @include source;
+
  @include source;
  padding-right: 4px;
  padding-left: 3px;
 
 span {
- color: $dark;
+ color: $lblue;
 
 &.tempdata {
  color: white;
+ font-size: 20px;
+ font-weight: 600;
 }// &.tempdata
 
 }// span
@@ -87,11 +96,11 @@ span {
 }// &.c
 
 &.feels {
- color: rgba($color: $dark, $alpha: .8);
+ color: white;
  font-weight: 600;
 
 span.feelsdata {
- color: white;
+ color: $lblue;
 }// span.feelsdata
 
 }// &.feels
@@ -108,12 +117,12 @@ span.feelsdata {
 p {
 
 span.wind {
- color: $dark;
+ color: white;
 
 }// span.wind
 
 span.winddata {
- color: white;
+ color: $lblue;
 }// &.winddata 
 
 }// p
@@ -127,7 +136,7 @@ span.winddata {
 p {
 
 span.hum {
- color: $dark;
+ color: $lblue;
 }// span.hum
 
 }// p 
@@ -150,7 +159,7 @@ svg {
 }// svg
 
 span.cels {
- color: $dark;
+ color: white;
  margin-left: 3px;
 }// span.cels
 
@@ -161,7 +170,9 @@ span.cels {
 }// ul.nameheatclouds
 
 ul.below {
+ background: rgba($color: $dark, $alpha: .4);
  margin-top: -15px !important;
+ padding: 2px;
 
 li {
  color: $dark;
@@ -173,14 +184,27 @@ li {
  padding-left: 10px;
 
 &.cmin {
+color: white;
+span.cels {
+ color: white;
+} // span.cels
 
 }// .cmin
 
 &.cmax {
+ color: white;
+
+span.cels {
+ color: white;
+} // span.cels
 
 }// &.cmax
 
 &.sea {
+
+span {
+ color: white;
+}// span
 
 }// &.sea
 
@@ -191,12 +215,16 @@ p {
 span {
 
 &.wind {
-
+ color: white;
 }// &.wind
 
 &.winddata {
- color: white;
+ color: $lblue;
 }// &.winddata
+
+&.cells {
+ color: white;
+}// &.cells
 
 }// span
 
@@ -209,11 +237,11 @@ span {
 span {
 
 &.tempdatamin {
- color: white;
+ color: $lblue;
 }// &.tempdatamin
 
 &.tempdatamax {
- color: white;
+ color: $lblue;
 }// &.tempdatamax
 
 &.cels {

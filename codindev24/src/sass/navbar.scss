@@ -61,33 +61,7 @@
   } // .navbar-start
 
   .navbar-center {
-    ul.menu {
-      li {
-        a {
-          &:hover {
-            background: $lpurple;
-            color: white;
-          } //&:hover
-        } // a
 
-        details {
-          summary {
-            &:hover {
-              background: $lpurple;
-              color: white;
-            } //&:hover
-          } // summary
-
-          ul.p-2 {
-            li {
-              a {
-                min-width: 150px !important;
-              } //a
-            } // li
-          } // ul.p-2
-        } // details
-      } // li
-    } //ul.menu
   } // .navbar-center
 
   .navbar-end {

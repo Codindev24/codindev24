@@ -11,11 +11,11 @@ export default function Home() {
       <Parallax
         className="welcome"
         blur={0}
-        bgImage="https://i.abcnewsfe.com/a/4de35c35-2698-43e6-b30a-01ff4d549425/iceland-volcano-eruption-03-ap-jef-231220_1703083482338_hpMain.jpg"
+        bgImage="https://wallpapers.com/images/hd/coding-background-l9pvpgogyoukpp2k.jpg"
         bgImageAlt="the cat"
         strength={200}
       >
-        <div className="content flex justify-center">
+        <div className="content flex justify-between">
           <Notes />
           {/* <Swr /> */}
         </div>

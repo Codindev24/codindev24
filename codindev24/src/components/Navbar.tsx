@@ -6,6 +6,7 @@ import Weather from "./Weather.tsx";
 
 export default function Navbar() {
   return (
+   <div>
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
@@ -55,7 +56,7 @@ export default function Navbar() {
       {/* .navbar-start */}
 
       <div className="navbar-center hidden lg:flex">
-      <Weather />
+      {/* <Weather /> */}
       </div>
       {/* .navbar-center */}
 
@@ -63,6 +64,10 @@ export default function Navbar() {
         <button>Login</button>
       </div>
       {/* .navbar-end */}
+    </div>
+    <div className="weatherbelow">
+      <Weather />
+      </div>
     </div>
   );
 }
