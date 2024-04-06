@@ -16,12 +16,14 @@
 }// .notetitle
 
 .note {
- background: white;
+ background: rgba($color: $dark, $alpha: .7);
  //border-bottom: 1px solid rgba($color: gray, $alpha: .3);
 
 .title {
  color: $llpurple;
  @include source;
+ font-size: 16px;
+ font-weight: 600;
  padding: 15px;
  
 a {
@@ -36,9 +38,11 @@ a {
 }// .title
 
 .date {
+ color: white;
  @include source;
+ font-size: 14px;
  font-weight: 300;
- padding: 15px;
+ margin-top: -10px !important;
 
 time.date {
  
