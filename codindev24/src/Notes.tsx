@@ -1,12 +1,10 @@
 import {React, useEffect, useState } from 'react'
-
-import sanityClient from "../client.js"
+import sanityClient from "./client.js"
 import Moment from 'react-moment';
 import 'moment-timezone';
-import Link from 'next/link';
 import Button from '@material-ui/core/Button';
-import "../sass/notes.scss";
-import { useHistory } from "react-router-dom";
+import "./sass/notes.scss";
+import { Link } from "react-router-dom";
 
 const Notes = ({ notes }) => {
  const [allNotesData, setAllNotes] = useState(null);
@@ -19,6 +17,8 @@ const Notes = ({ notes }) => {
      author,
      categories,
      publishedAt,
+     Code,
+     Body,
      mainImage{
       asset->{
        _id,
@@ -50,9 +50,9 @@ const Notes = ({ notes }) => {
        <div className="note sm:grid-cols-12">
 
        <div className="title items-center text-center">
-       <a href="#" onClick={() => router.push(`/notes/${notes.slug.current}`)} key={index}>
+       <Link to="/notes/$[slug]" key={index}>
          {notes.title}
-       </a>
+        </Link>
        </div>{ /* .title */ }
 
        <div className="date items-center text-center">
@@ -63,8 +63,8 @@ const Notes = ({ notes }) => {
 
        <div className="body">
         
-       { notes.body }
-       { notes.code}
+       { notes.Body }
+       { notes.Code}
 
        </div>{ /* .body */ }
 
