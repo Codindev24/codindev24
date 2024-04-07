@@ -82,6 +82,10 @@ export const Notes = ({ title, body, code, publishedAt, image, author }) => {
   return (
     <div className="notesslug container mx-auto">
 
+      {notes.title}
+      {notes.code}
+      {notes.body}
+
           <Card className={classes.root}>
 
               <CardHeader

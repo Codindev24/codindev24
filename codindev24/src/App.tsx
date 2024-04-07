@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './Home';
 import './sass/home.scss';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,9 +11,14 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar />
-        <Home />
-        <Footer />
+      <Router>
+      <Navbar />
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/[slug]" />
+      </Routes>
+      <Footer />
+      </Router>
       </div>
     </>
   );
