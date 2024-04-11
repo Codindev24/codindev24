@@ -6,7 +6,6 @@ import './sass/home.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -15,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/[slug]" />
+          <Route path="/slug" />
       </Routes>
       <Footer />
       </Router>
