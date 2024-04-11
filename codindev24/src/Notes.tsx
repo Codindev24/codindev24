@@ -40,7 +40,7 @@ const Notes = ({ notes, postsPerPage, totalPosts }) => {
 
   <div className="notes">
      
-     <div className="notepost">
+     <div className="notepost flex justify-between">
      
      <div className="notetitle">
        Notes
