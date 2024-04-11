@@ -5,24 +5,26 @@
 
 
 .notepost {
+padding-top: 20px;
+padding-bottom: 50px;
 
 .notetitle {
- color: white;
+ color: $llpurple;
  @include source;
- font-size: 24px;
+ font-size: 28px;
+ font-weight: 400;
  text-align: center;
- padding: 20px;
+ padding-top: 100px;
+ padding-left: 20px;
  
 }// .notetitle
 
 .note {
- background: rgba($color: $dark, $alpha: .7);
- border: 10px solid rgba($color: $llpurple, $alpha: .2);
  padding-bottom: 15px;
  //border-bottom: 1px solid rgba($color: gray, $alpha: .3);
 
 .title {
- color: $llpurple;
+ color: $dark;
  @include source;
  font-size: 16px;
  font-weight: 600;
@@ -42,7 +44,7 @@ a {
 }// .title
 
 .date {
- color: white;
+ color: $llpurple;
  @include source;
  font-size: 14px;
  font-weight: 300;
