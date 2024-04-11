@@ -10,29 +10,52 @@
 
     .react-parallax-content {
       background-color: rgba($color: $dark, $alpha: 0.4);
-      padding-top: 20px;
-      padding-left: 20px;
 
       // latest posts ////////////////////////////////////////////////////////
       .content {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        margin-top: -20px;
-        margin-left: -20px;
-        .imageinfo {
-          h1 {
-            background: rgba($color: $dark, $alpha: 0.4);
-            color: white;
-            min-width: 100% !important;
-            padding: 2px;
+          .left {
+           color: white;
+           padding-top: 330px;
+           padding-left: 50px;
+           span {
+           color: $lblue;
+           font-weight: 400;
+           }// span
+          }// .left
+          
+          .right {
+           color: white;
+           background: rgba($color: $llpurple, $alpha: .4);
+           padding-top: 300px;
+           padding-bottom: 300px;
+           padding-left: 350px;
+           padding-right: 350px;
+           border-left: 4px solid rgba($color: white, $alpha: .4);
+           .cata {
+           span {
+           &.dev {
+           color: $ryellow;
+           margin-right: 10px;
+           }// &.dev
+           &.news {
+           color: $llgreen;
+           }// &,news
+           }// span
+           }// .cata
+           h1 {
+           small {
 
-            img {
-              width: 100% !important;
-              min-height: 350px;
-              max-height: 350px;
-            } // img
-          } // h1
-        } // .imageinfo
+           }// small
+           span {
+           svg {
+           color: $lblue; 
+           width: 15px;
+           height: 15px;
+           margin-top: -3px;
+           }// svg
+           }// span
+           }// h1
+          }// right
       } // .content
     } // ..react-parallax-content
   } // .react-parallax.welcome

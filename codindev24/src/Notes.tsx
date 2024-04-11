@@ -1,24 +1,25 @@
 import {React, useEffect, useState } from 'react'
-import sanityClient from "./client.js"
+import createClient from "./client.js"
 import Moment from 'react-moment';
 import 'moment-timezone';
 import Button from '@material-ui/core/Button';
 import "./sass/notes.scss";
 import { Link } from "react-router-dom";
 
-const Notes = ({ notes }) => {
+const Notes = ({ notes, postsPerPage, totalPosts }) => {
  const [allNotesData, setAllNotes] = useState(null);
+ const slug = notes?.slug;
 
  useEffect(() => {
-  sanityClient.fetch(
+  createClient.fetch(
    `*[_type == "notes"]{
      title,
      slug,
      author,
      categories,
      publishedAt,
-     Code,
-     Body,
+     code,
+     body,
      mainImage{
       asset->{
        _id,
@@ -30,6 +31,10 @@ const Notes = ({ notes }) => {
   .then((data) => setAllNotes(data))
   .catch(console.error);
  }, []);
+
+ for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+  pageNumbers.push(i);
+}
 
  return (
 
@@ -50,9 +55,15 @@ const Notes = ({ notes }) => {
        <div className="note sm:grid-cols-12">
 
        <div className="title items-center text-center">
-       <Link to="/notes/$[slug]" key={index}>
+        {/* <Link to={`/notes/${notes.slug}`}>{notes.title}</Link> */}
+       <a href="" onClick={() => router.push(`/notes/${notes.slug.current}`)} key={index}>
          {notes.title}
-        </Link>
+       </a>
+
+       {/* <Link to={`/notes/${notes.slug.current}`}>
+         {notes.title}
+       </Link> */}
+
        </div>{ /* .title */ }
 
        <div className="date items-center text-center">
