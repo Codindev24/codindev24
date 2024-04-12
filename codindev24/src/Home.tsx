@@ -6,6 +6,7 @@ import Swr from './Swr.tsx';
 import Notes from './Notes.tsx';
 import Hero from './Hero.tsx';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Avatar from '@mui/material/Avatar';
 
 export default function Home() {
   return (
@@ -28,7 +29,13 @@ export default function Home() {
           <h1>Next<small>js</small> React<small>js</small> The library for web and native user interfaces. <br />
           Next.js is built on the latest React features, including Server Components and Actions. <br />
           Development. <br />
-          <span>Codindev <AccessTimeIcon /> 14:52 11 april 2024</span>
+          <span>
+          <div className="avatar">
+          <div className="w-5 rounded-full">
+            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          </div>
+        </div>
+          <span className="name">Codindev</span> <AccessTimeIcon /> 14:52 11 april 2024</span>
           </h1>
         </div>
 
@@ -38,6 +45,36 @@ export default function Home() {
       <div className="notes">
       <Notes />
       </div>
+      <div className="devs">
+      <Parallax
+        className="devs"
+        blur={0}
+        bgImage="https://images.unsplash.com/photo-1712414951449-424e662f6e74?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <div className="content flex justify-between">
+
+       <div className="next">
+       next
+       </div>{/* .next */}
+
+       <div className='react'>
+       react
+       </div>{/* .react */}
+
+       <div className='other'>
+       other
+       </div>{/* .other */}
+
+       <div className='scss'>
+       scss
+       </div>{/* .scss */}
+
+        </div>{/* .content */}
+
+      </Parallax>
+      </div>{/* .devs */}
     </div>
   );
 }

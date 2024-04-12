@@ -9,13 +9,16 @@ padding-top: 20px;
 padding-bottom: 50px;
 
 .notetitle {
- color: $llpurple;
+ background: rgba($color: $llpurple, $alpha: .4);   
+ color: white;
  @include source;
  font-size: 28px;
  font-weight: 400;
  text-align: center;
- padding-top: 100px;
- padding-left: 20px;
+ padding-top: 119px;
+ padding-left: 30px;
+ padding-right: 30px;
+ margin-top: -20px;
  
 }// .notetitle
 

@@ -47,6 +47,18 @@
 
            }// small
            span {
+           span.name {
+
+           }// span.name
+           .avatar {
+            margin-right: 5px;
+            margin-bottom: -20px;
+           div {
+
+           img {
+           }// img
+           }// div
+           }// .avatar 
            svg {
            color: $lblue; 
            width: 15px;
@@ -59,4 +71,54 @@
       } // .content
     } // ..react-parallax-content
   } // .react-parallax.welcome
+  .notes {
+
+  }// .notes
+  .devs {
+   .react-parallax.devs {
+    image.react-parallax-bgimage {
+      width: 100% !important;
+    } // image.react-parallax-bgimage
+
+    .react-parallax-content {
+      background-color: rgba($color: $dark, $alpha: 0.4);
+
+      // latest posts ////////////////////////////////////////////////////////
+      .content {
+      .next {
+       color: white;
+       background: rgba($color: white, $alpha: .4);
+       width: 100%;
+       padding-top: 50px;
+       padding-bottom: 50px;
+       padding-left: 20px;
+      }// .next
+      .react {
+       color: white;
+       background: rgba($color: $llpurple, $alpha: .4);
+       width: 100%;
+       padding-top: 50px;
+       padding-bottom: 50px;
+       padding-left: 20px;
+      }// .react
+      .other {
+       color: white;
+       background: rgba($color: $neon, $alpha: .4);
+       width: 100%;
+       padding-top: 50px;
+       padding-bottom: 50px;
+       padding-left: 20px;
+      }/// .other
+      .scss {
+       color: white;
+       background: rgba($color: $llorange, $alpha: .4);
+       width: 100%;
+       padding-top: 50px;
+       padding-bottom: 50px;
+       padding-left: 20px;
+      }// .scss
+      } // .content
+    } // ..react-parallax-content
+  } // .react-parallax.welcome
+  }// .devs
 } // .home
