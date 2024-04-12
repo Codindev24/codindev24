@@ -4,6 +4,7 @@ import { Parallax, Background } from 'react-parallax';
 import useSWR from 'swr';
 import Swr from './Swr.tsx';
 import Notes from './Notes.tsx';
+import Posts from './Posts.tsx';
 import Hero from './Hero.tsx';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Avatar from '@mui/material/Avatar';
@@ -83,6 +84,9 @@ export default function Home() {
 
       </Parallax>
       </div>{/* .devs */}
+      <div className="posts">
+      <Posts />
+      </div>
     </div>
   );
 }

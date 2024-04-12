@@ -73,9 +73,6 @@ const Notes = ({ notes, postsPerPage, totalPosts }) => {
        </div>{ /* .date */ }
 
        <div className="body">
-        
-       { notes.Body }
-       { notes.Code}
 
        </div>{ /* .body */ }
 
