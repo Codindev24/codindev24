@@ -1,199 +1,84 @@
-import React from 'react';
-import imageUrlBuilder from '@sanity/image-url';
-import { useState, useEffect } from 'react';
-import BlockContent from '@sanity/block-content-to-react';
-import Moment from 'react-moment';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import createClient from "../client.js";
+import imageUrlBuilder from "@sanity/image-url";
+import BlockContent from "@sanity/block-content-to-react";
+import { Parallax, Background } from 'react-parallax';
+import "../sass/single.scss"
 
-// menu
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+const builder = imageUrlBuilder(createClient);
+function urlFor(source) {
+ return builder.image(source);
+}
 
-// card
-import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+export default function Slug() {
+ const [postData, setPostData] = useState(null);
+ const { slug } = useParams();
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      //maxWidth: 900,
-    },
-    media: {
-      height: 0,
-      paddingTop: '56.25%', // 16:9
-    },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-    avatar: {
-      backgroundColor: red[500],
-    },
-  }));
-
-export const Notes = ({ title, body, code, publishedAt, image, author }) => {
-  const [imageUrl, setImageUrl] = useState('');
-  // card
-  const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
-  useEffect(() => {
-    const imgBuilder = imageUrlBuilder({
-      projectId: 'fr3rfp8i',
-      dataset: 'production',
-    });
-
-    setImageUrl(imgBuilder.image(image));
-  }, [image]);
-
-  // 3dot menu for delete and edit post
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  return (
-    <div className="notesslug container mx-auto">
-
-      {notes.title}
-      {notes.code}
-      {notes.body}
-
-          <Card className={classes.root}>
-
-              <CardHeader
-                  avatar={
-                      <Avatar aria-label="recipe" className={classes.avatar}>
-                          Cd
-                      </Avatar>
-                  }
-                  action={
-                    <div>
-                    <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                      <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                      </IconButton>
-                    </Button>
-                    <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-                      <MenuItem onClick={handleClose}>Delete Note</MenuItem>
-                      <MenuItem onClick={handleClose}>Edit Note</MenuItem>
-                      <MenuItem onClick={handleClose}>Close</MenuItem>
-                    </Menu>
-                  </div>
-                  }
-                  title={title}
-                  subheader={
-                    <Moment className="date text-purple-500" format="HH:mm DD MMM YYYY">
-                    {publishedAt}
-                    </Moment>   
-                  }
-              />
-
-              <CardMedia
-                  className={classes.media}
-                  image={imageUrl}
-                  title="Paella dish"
-              />
-
-              <CardContent>
-              <Typography paragraph>
-                      <p className="text-sm bg-purple-900 text-white text-center">Lýsing..</p>
-                      <BlockContent blocks={body} projectId="fr3rfp8i" dataset="production" />
-                      </Typography>
-              </CardContent>
-
-              <CardActions disableSpacing>
-
-                  <IconButton
-                      className={clsx(classes.expand, {
-                          [classes.expandOpen]: expanded,
-                      })}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                  >
-                      <p className="bg-purple-900 text-white text-sm pl-2 pr-2">code
-                      <ExpandMoreIcon /></p>
-
-                  </IconButton>
-
-              </CardActions>
-
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
-                  <CardContent>
-
-                      <Typography paragraph>
-                      {/* <p className="text-sm bg-purple-900 text-white text-center">Code..</p> */}
-                      <code className="text-gray-700"><BlockContent className="bg-gray-900 p-2" blocks={code} projectId="fr3rfp8i" dataset="production" /></code>
-                      </Typography>
-
-                  </CardContent>
-              </Collapse>
-
-          </Card>
-
-    </div>/* .notesslug */
-  );
-};
-
-export const getServerSideProps = async pageContext => {
-  const pageSlug = pageContext.query.slug;
-  
-  if (!pageSlug) {
-    return {
-      notFound: true
+useEffect(() => {
+ createClient.fetch(
+  `*[slug.current == $slug]{
+   title,
+   category,
+   slug,
+   mainImage{
+    asset->{
+     _id,
+     url
     }
-  }
+   },
+   body,
+   "name": author->name,
+   "authorImage": author->image
+  }`,
+  { slug }
+ )
+ .then((data) => setPostData(data[0]))
+ .catch(console.error);
+}, [slug]);
 
-  const query = encodeURIComponent(`*[ _type == "notes" && slug.current == "${pageSlug}" ]`);
-  const url = `https://fr3rfp8i.api.sanity.io/v1/data/query/production?query=${query}`;
+if (!postData) return <div>Loading...</div>;
 
-  const result = await fetch(url).then(res => res.json());
-  const notes = result.result[0];
+ return (
+    <div className="defaultpost">
 
-  if (!notes) {
-    return {
-      notFound: true
-    }
-  } else {
-    return {
-      props: {
-        code: notes.code,
-        body: notes.body,
-        title: notes.title,
-        publishedat: notes.publishedAt,
-        image: notes.mainImage,
-        author: notes.author,
-      }
-    }
-  }
-};
+        <div className="single">
 
-export default Notes;
+        <Parallax
+        className="defaultpost"
+        blur={0}
+        bgImage={urlFor(postData.mainImage).url()}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <div className="content">
+
+     
+        <div className="datax flex justify-center">
+
+          {/* <img src={urlFor(postData.authorImage).url()} alt="authorimage" /> */}
+
+           <div className="category">{postData.category}</div>
+
+            <div className="title">{postData.title}</div>
+
+            <div className="author">{postData.name}</div>
+
+          <span>
+           {/* <BlockContent
+           blocks={postData.body}
+           projectId={createClient.clientConfig.projectId}
+           dataset={createClient.clientConfig.dataset}
+           /> */}
+           </span>
+
+           </div>{/* .datax */}
+
+        </div>{/* .content */}
+
+      </Parallax>
+
+           </div>{/* .defaultpost */}
+    </div>
+ )
+}

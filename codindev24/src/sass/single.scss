@@ -1,0 +1,47 @@
+@import './base/colors.scss';
+@import './base/mixins.scss';
+
+.defaultpost {
+
+.single {
+
+ .react-parallax.defaultpost {
+  image.react-parallax-bgimage {
+    width: 100% !important;
+  } // image.react-parallax-bgimage
+
+  .react-parallax-content {
+    background-color: rgba($color: $dark, $alpha: 0.4);
+
+    // latest posts ////////////////////////////////////////////////////////
+    .content {
+     .datax {
+      padding-top: 300px;
+      padding-bottom: 300px;
+      div {
+      
+      &.category {
+       color: $llgreen;
+      }// &.category
+      
+      &.title {
+      color: white;
+      @include raleway;
+      font-size: 44px;
+      font-weight: 600;
+      }// &.title
+      
+      &.author {
+      color: $llpurple;
+      }// &.author
+      
+      }// div
+      
+      }// .datax
+    } // .content
+  } // ..react-parallax-content
+} // .react-parallax.defaultpost
+ 
+}// .single
+
+}// .defaultpost

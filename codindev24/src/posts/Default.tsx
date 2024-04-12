@@ -3,13 +3,15 @@ import { useParams } from "react-router-dom";
 import createClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import { Parallax, Background } from 'react-parallax';
+import "../sass/single.scss"
 
 const builder = imageUrlBuilder(createClient);
 function urlFor(source) {
  return builder.image(source);
 }
 
-export default function OneSlider() {
+export default function Slug() {
  const [postData, setPostData] = useState(null);
  const { slug } = useParams();
 
@@ -38,21 +40,35 @@ useEffect(() => {
 if (!postData) return <div>Loading...</div>;
 
  return (
-    <div className="singleslider">
+    <div className="defaultpost">
 
-        <div className="uk-card-media-top">
-        <div className="imagetitle">
-        <img src={postData.mainImage} alt="sliderimage"/>
-         </div>
-        </div>
+        <div className="single">
 
-        <div className="uk-card-body">
-        <div className="author flex justify-space-between">
+        <Parallax
+        className="defaultpost"
+        blur={0}
+        bgImage={urlFor(postData.mainImage).url()}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <div className="content">
+
+     
+        <div className="datax flex justify-center">
+
           {/* <img src={urlFor(postData.authorImage).url()} alt="authorimage" /> */}
-          <span>{postData.name}</span>
-          </div>
-          <h3 className="uk-card-title">{postData.title}</h3>
-          <span className="category">{postData.category}</span>
+
+          <h1>
+          {postData.category}
+            <span>{postData.title}</span>
+            <small>{postData.name}</small>
+          </h1>
+
+           <div className="category">{postData.category}</div>
+
+            <div className="title">{postData.title}</div>
+
+            <div className="author">{postData.name}</div>
 
           <span>
            {/* <BlockContent
@@ -60,9 +76,15 @@ if (!postData) return <div>Loading...</div>;
            projectId={createClient.clientConfig.projectId}
            dataset={createClient.clientConfig.dataset}
            /> */}
-
            </span>
-        </div>
+
+           </div>{/* .datax */}
+
+        </div>{/* .content */}
+
+      </Parallax>
+
+           </div>{/* .defaultpost */}
     </div>
  )
 }
