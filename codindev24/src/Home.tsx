@@ -56,19 +56,27 @@ export default function Home() {
         <div className="content flex justify-between">
 
        <div className="next">
-       next
+       <h1>Next <br />
+        <small>For more complex projects.</small>
+        </h1>
        </div>{/* .next */}
 
        <div className='react'>
-       react
+       <h1>React <br />
+        <small>Prefered choise.</small>
+        </h1>
        </div>{/* .react */}
 
        <div className='other'>
-       other
+       <h1>Scripts <br />
+        <small>libraries, Cms. Anything's possible.</small>
+        </h1>
        </div>{/* .other */}
 
        <div className='scss'>
-       scss
+       <h1>scss <br />
+        <small>prev Stylus, css anything goes.</small>
+        </h1>
        </div>{/* .scss */}
 
         </div>{/* .content */}
