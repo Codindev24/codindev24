@@ -5,25 +5,21 @@ import 'moment-timezone';
 import "./sass/notes.scss";
 import { Link } from "react-router-dom";
 
-const Notes = () => {
+function Notes() {
  const [allNotesData, setAllNotes] = useState(null);
 
  useEffect(() => {
   createClient.fetch(
-   `*[_type == "note"]{
+   `*[_type == "notes"]{
      title,
      slug,
-     author,
-     categories,
      publishedAt,
-     code,
-     body,
      mainImage{
       asset->{
        _id,
        url 
       }  
-     },
+     }
    }` 
   )
   .then((data) => setAllNotes(data))
@@ -42,14 +38,17 @@ const Notes = () => {
 
      <ul className="grid grid-cols-6 gap-2">
      {allNotesData &&
-      allNotesData.map((note, index) => ( 
+      allNotesData.map((notes, index) => ( 
 
        <li key={index}>
 
        <div className="note sm:grid-cols-12">
 
        <div className="title items-center text-center">
-       <Link to={'/' + note.slug.current} key={note.slug.current}>{ notes.title }</Link>
+       {/* <a href="#" onClick={() => router.push(`/notes/${notes.slug.current}`)} key={index}>
+         {notes.title}
+       </a> */}
+       <Link to={'/' + notes.slug} key={notes.slug}>{ notes.title }</Link>
 
        </div>{ /* .title */ }
 
@@ -73,4 +72,4 @@ const Notes = () => {
  )
 }
 
-export default Notes
+export default Notes;

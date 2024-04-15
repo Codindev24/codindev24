@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import createClient from "./client.js"
+import imageUrlBuilder from "@sanity/image-url";
+import "./sass/posts.scss"
+
+
+const builder = imageUrlBuilder(createClient);
+function urlFor(source) {
+ return builder.image(source);
+}
 
 function Posts() {
 const [allPostsData, setAllPosts] = useState(null);
@@ -22,18 +30,30 @@ useEffect(() => {
  .catch(console.error);
 }, []);
 
+if (!allPostsData) return <div>Loading...</div>;
+
   return (
     <div className="posts">
-        <ul className="uk-slider-items uk-grid-match uk-text-center uk-child-width-1-1 uk-child-width-1-3@m">
+      <div className="between flex justify-between">
+        <div className="posttitle">
+          Posts
+        </div>{ /* .posttitle */ }
+        <ul className="grid grid-cols-6 gap-0">
             {allPostsData &&
             allPostsData.map((post, index) =>( 
             <li key={index}>
-                    {post.title}
-                    <Link to={'/' + post.slug.current} key={post.slug.current}>View🖇️</Link>
-                  
+
+                    <div className="post">
+                    <img src={urlFor(post.mainImage).url()} alt="" />
+                    <div className="flex justify-between">
+                      <span>{post.title}</span>
+                      <Link to={'/' + post.slug.current} key={post.slug.current}>View</Link>
+                    </div>
+                    </div>{/* .post */}
             </li>
           ))}
         </ul>
+        </div>{/* .between */}
       </div>
   );
 }

@@ -4,7 +4,7 @@ import createClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import { Parallax, Background } from 'react-parallax';
-import "../sass/single.scss"
+import "../sass/singlenote.scss";
 
 const builder = imageUrlBuilder(createClient);
 function urlFor(source) {
@@ -12,7 +12,7 @@ function urlFor(source) {
 }
 
 export default function Noteslug() {
- const [postData, setPostData] = useState(null);
+ const [noteData, setNoteData] = useState(null);
  const { slug } = useParams();
 
 useEffect(() => {
@@ -33,11 +33,11 @@ useEffect(() => {
   }`,
   { slug }
  )
- .then((data) => setPostData(data[0]))
+ .then((data) => setNoteData(data[0]))
  .catch(console.error);
 }, [slug]);
 
-if (!postData) return <div>Loading...</div>;
+if (!noteData) return <div>Loading...</div>;
 
  return (
     <div className="defaultpost">
@@ -47,7 +47,7 @@ if (!postData) return <div>Loading...</div>;
         <Parallax
         className="defaultpost"
         blur={0}
-        bgImage={urlFor(postData.mainImage).url()}
+        bgImage={urlFor(noteData.mainImage).url()}
         bgImageAlt="the cat"
         strength={200}
       >
@@ -58,11 +58,11 @@ if (!postData) return <div>Loading...</div>;
 
           {/* <img src={urlFor(postData.authorImage).url()} alt="authorimage" /> */}
 
-           <div className="category">{postData.category}</div>
+           <div className="category">{noteData.category}</div>
 
-            <div className="title">{postData.title}</div>
+            <div className="title">{noteData.title}</div>
 
-            <div className="author">{postData.name}</div>
+            <div className="author">{noteData.name}</div>
 
           <span>
            {/* <BlockContent

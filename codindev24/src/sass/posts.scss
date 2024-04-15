@@ -3,76 +3,37 @@
 
 .posts {
 
-.postspost {
+.posttitle {
+ background: rgba($color: $navpink, $alpha: .4);   
+ color: white;
+ @include source;
+ font-size: 28px;
+ font-weight: 400;
+ text-align: center;
+ padding-top: 150px;
+ padding-left: 30px;
+ padding-right: 30px;
+ margin-top: -20px;
+}// .posttitle
 
 .post {
- margin-bottom: 12px;
-
-.title {
- @include source;
- padding-top: 20px;
- padding-bottom: 20px;
- padding-left: 20px;
- padding-right: 30px;
-
-}// .title
-
-.clock {
- background: $semideepgrey;
- 
- @include source;
- font-weight: 300;
- border-left: 2px solid $deepgrey;
- padding: 20px;
-
-time.timi {
- color: white;
-}// time.timi
-
-time.date {
- color: $llpurple;
-}// time.date
-
-}// clock
-
-.content {
-
-.image {
-
+ margin-top: 50px;
+ padding-left: 10px;
+ padding-right: 10px;
 img {
+ min-height: 180px;
+ max-height: 180px;
+}// img 
 
-}// img
-  
-}// .image
+span {
 
-}// .content
-
-.title {
+}// span
 
 a {
-
+ color: $llpurple;
+ padding-left: 20px;
 }// a
 
-}// .title
-
-.time {
- background: $deepgrey;
- 
- @include source;
- font-weight: 300;
- padding-left: 20px;
- padding-right: 20px;
-
-time.date {
- color: $llpurple;
- padding: 10px !important;
- padding: 22px;
-}// time.date
-
-}// time
-
 }// .post
-
-}// .postspost
  
 }// .posts
