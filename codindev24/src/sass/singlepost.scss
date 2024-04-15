@@ -18,24 +18,46 @@
      .datax {
       padding-top: 300px;
       padding-bottom: 300px;
-      div {
       
-      &.category {
+      .category {
        color: $llgreen;
+       span {
+       &.second {
+       margin-left: 10px;
+       }// &.second
+       }// span
       }// &.category
       
-      &.title {
+      .posttitle {
       color: white;
       @include raleway;
       font-size: 44px;
       font-weight: 600;
-      }// &.title
-      
-      &.author {
-      color: $llpurple;
+      margin-top: -10px;
+      }// &.posttitle
+      .authorimg {
+      img {
+       width: 20px;
+       height: 20px;
+       margin-top: -2px;
+      }// img
+      }// .authorimg
+      .author {
+      color: white;
+      margin-top: -5px;
+      margin-left: 5px;
       }// &.author
-      
-      }// div
+      .time {
+       color: white; 
+       margin-left: 5px;
+       margin-top: -5px;
+       svg {
+        color: $lblue; 
+        width: 15px;
+        height: 15px;
+        margin-top: -3px;
+        }// svg
+      }// .time
       
       }// .datax
     } // .content

@@ -2,17 +2,15 @@ import {React, useEffect, useState } from 'react'
 import createClient from "./client.js"
 import Moment from 'react-moment';
 import 'moment-timezone';
-import Button from '@material-ui/core/Button';
 import "./sass/notes.scss";
 import { Link } from "react-router-dom";
 
-const Notes = ({ notes, postsPerPage, totalPosts }) => {
+const Notes = () => {
  const [allNotesData, setAllNotes] = useState(null);
- const slug = notes?.slug;
 
  useEffect(() => {
   createClient.fetch(
-   `*[_type == "notes"]{
+   `*[_type == "note"]{
      title,
      slug,
      author,
@@ -32,10 +30,6 @@ const Notes = ({ notes, postsPerPage, totalPosts }) => {
   .catch(console.error);
  }, []);
 
- for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-  pageNumbers.push(i);
-}
-
  return (
 
   <div className="notes">
@@ -48,21 +42,14 @@ const Notes = ({ notes, postsPerPage, totalPosts }) => {
 
      <ul className="grid grid-cols-6 gap-2">
      {allNotesData &&
-      allNotesData.map((notes, index) => ( 
+      allNotesData.map((note, index) => ( 
 
        <li key={index}>
 
        <div className="note sm:grid-cols-12">
 
        <div className="title items-center text-center">
-        {/* <Link to={`/notes/${notes.slug}`}>{notes.title}</Link> */}
-       <a href="" onClick={() => router.push(`/notes/${notes.slug.current}`)} key={index}>
-         {notes.title}
-       </a>
-
-       {/* <Link to={`/notes/${notes.slug.current}`}>
-         {notes.title}
-       </Link> */}
+       <Link to={'/' + note.slug.current} key={note.slug.current}>{ notes.title }</Link>
 
        </div>{ /* .title */ }
 
@@ -71,16 +58,6 @@ const Notes = ({ notes, postsPerPage, totalPosts }) => {
        { notes.publishedAt }
 
        </div>{ /* .date */ }
-
-       <div className="body">
-
-       </div>{ /* .body */ }
-
-       <div className="link">
-        {/* <Link href={'/' + post.slug.current} key={post.slug.current}>
-         <button>Read</button>
-        </Link> */}
-       </div>{ /* .link */ }
 
        </div>{ /* .note */ }
 

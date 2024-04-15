@@ -4,7 +4,9 @@ import createClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import { Parallax, Background } from 'react-parallax';
-import "../sass/single.scss"
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Moment from 'react-moment';
+import "../sass/singlepost.scss"
 
 const builder = imageUrlBuilder(createClient);
 function urlFor(source) {
@@ -20,6 +22,7 @@ useEffect(() => {
   `*[slug.current == $slug]{
    title,
    category,
+   publishedAt,
    slug,
    mainImage{
     asset->{
@@ -56,27 +59,30 @@ if (!postData) return <div>Loading...</div>;
      
         <div className="datax flex justify-center">
 
-          {/* <img src={urlFor(postData.authorImage).url()} alt="authorimage" /> */}
+        <div className="flex-none">
+        <div className="category">
+            {postData.category}
+            <span>Web Development <span className="second">improvements</span></span>
+            </div>
+            
+            <div className="posttitle">
+              {postData.title}
+            </div>
 
-          <h1>
-          {postData.category}
-            <span>{postData.title}</span>
-            <small>{postData.name}</small>
-          </h1>
+            <div className="flex justify-right">
+            <div className="authorimg">
+             <img className="rounded-full" src={urlFor(postData.authorImage).url()} alt="authorimage" />
+            </div>{/* .authorimg */}
 
-           <div className="category">{postData.category}</div>
+            <div className="author">
+             {postData.name}
+            </div>{/* .author */}
 
-            <div className="title">{postData.title}</div>
-
-            <div className="author">{postData.name}</div>
-
-          <span>
-           {/* <BlockContent
-           blocks={postData.body}
-           projectId={createClient.clientConfig.projectId}
-           dataset={createClient.clientConfig.dataset}
-           /> */}
-           </span>
+            <div className="time">
+            <AccessTimeIcon /> {postData.publishedAt}
+            </div>{/* .time */}
+            </div>
+        </div>
 
            </div>{/* .datax */}
 
