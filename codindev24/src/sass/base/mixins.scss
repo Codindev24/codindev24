@@ -14,3 +14,23 @@
     font-family: 'Raleway', sans-serif !important;
   }
   
+
+
+  @mixin oxygenl {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @mixin oxygenr {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @mixin oxygenb {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  

@@ -20,8 +20,11 @@
       padding-bottom: 300px;
       
       .category {
-       color: $llgreen !important;
+       color: $lpurple !important;
        p.inline {
+       @include oxygenb;
+       font-size: 0.9rem;
+       text-transform: uppercase;
        padding-right: 10px;
        }// p.inline 
       }// &.category
@@ -62,6 +65,40 @@
   } // ..react-parallax-content
 } // .react-parallax.defaultpost
  
+.body {
+
+p {
+ @include oxygenr;
+ font-size: 1.1rem;
+ padding-left: 10px;
+ padding-right: 10px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}// p
+
+div {
+padding-top: 20px;
+
+p {
+ @include oxygenr;
+ font-size: 1.1rem;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}// p
+
+figure {
+
+img {
+ width: 100% !important;
+ padding-top: 20px;
+}// img
+
+}// figure
+
+}// div
+
+}// /.body
+
 }// .single
 
 }// .defaultpost

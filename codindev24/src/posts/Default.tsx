@@ -93,6 +93,10 @@ if (!postData) return <div>Loading...</div>;
 
       </Parallax>
 
+      <div className="body flex justify-center">
+      <BlockContent blocks={postData.body} projectId="fr3rfp8i" dataset="production" />
+      </div>{/* .body */}
+
            </div>{/* .defaultpost */}
     </div>
  )
