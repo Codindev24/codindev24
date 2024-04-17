@@ -20,12 +20,10 @@
       padding-bottom: 300px;
       
       .category {
-       color: $llgreen;
-       span {
-       &.second {
-       margin-left: 10px;
-       }// &.second
-       }// span
+       color: $llgreen !important;
+       p.inline {
+       padding-right: 10px;
+       }// p.inline 
       }// &.category
       
       .posttitle {

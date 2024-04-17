@@ -19,7 +19,6 @@ useEffect(() => {
  createClient.fetch(
   `*[slug.current == $slug]{
    title,
-   category,
    slug,
    mainImage{
     asset->{
@@ -58,7 +57,7 @@ if (!noteData) return <div>Loading...</div>;
 
           {/* <img src={urlFor(postData.authorImage).url()} alt="authorimage" /> */}
 
-           <div className="category">{noteData.category}</div>
+           <div className="category">{noteData.category.title}</div>
 
             <div className="title">{noteData.title}</div>
 

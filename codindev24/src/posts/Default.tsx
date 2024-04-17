@@ -15,13 +15,14 @@ function urlFor(source) {
 
 export default function Slug() {
  const [postData, setPostData] = useState(null);
+ const [posts, setPosts] = useState([])
  const { slug } = useParams();
 
 useEffect(() => {
  createClient.fetch(
   `*[slug.current == $slug]{
    title,
-   category,
+   "categories": categories[]->title,
    publishedAt,
    slug,
    mainImage{
@@ -61,8 +62,10 @@ if (!postData) return <div>Loading...</div>;
 
         <div className="flex-none">
         <div className="category">
-            {postData.category}
-            <span>Web Development <span className="second">improvements</span></span>
+            {postData.categories.map((c, i) => (
+                <p className='inline'>{c} </p>
+            ))}
+            {/* <span>Web Development <span className="second">improvements</span></span> */}
             </div>
             
             <div className="posttitle">
