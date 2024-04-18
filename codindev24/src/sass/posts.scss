@@ -4,7 +4,7 @@
 .posts {
 
 .posttitle {
- background: rgba($color: $navpink, $alpha: .4);   
+ background: rgba($color: $DarkMagenta, $alpha: .4);   
  color: white;
  @include source;
  font-size: 28px;
@@ -21,18 +21,42 @@
  padding-left: 10px;
  padding-right: 10px;
 img {
- min-height: 180px;
- max-height: 180px;
+ min-width: 100% !important;
+ min-height: 158px;
+ max-height: 158px;
 }// img 
 
-span {
+.titlelink {
 
+span {
+ @include oxygenb;
 }// span
 
 a {
- color: $llpurple;
+ color: gray;
  padding-left: 20px;
 }// a
+
+}// .titlelink
+
+p.inline {// categories
+ color: rgba($color: $llpurple, $alpha: .9);
+ @include oxygenr;
+}// p.inline
+
+span.time {
+ color: gray;
+ @include oxygenl;
+ font-size: 14px;
+
+svg {
+ color: $dark;
+ width: 14px;
+ height: 14px;
+ margin-top: -2px;
+}// svg
+
+}// span.time
 
 }// .post
  

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import createClient from "./client.js"
 import imageUrlBuilder from "@sanity/image-url";
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import "./sass/posts.scss"
 
 
@@ -18,6 +19,8 @@ useEffect(() => {
   `*[_type == "post"]{
     title,
     slug,
+    "categories": categories[]->title,
+    publishedAt,
     mainImage{
      asset->{
       _id,
@@ -44,11 +47,16 @@ if (!allPostsData) return <div>Loading...</div>;
             <li key={index}>
 
                     <div className="post">
-                    <img src={urlFor(post.mainImage).url()} alt="" />
-                    <div className="flex justify-between">
+                    <img className="rounded-md" src={urlFor(post.mainImage).url()} alt="" />
+                    <div className="titlelink flex justify-between">
                       <span>{post.title}</span>
                       <Link to={'/' + post.slug.current} key={post.slug.current}>View</Link>
                     </div>
+                    {post.categories.map((c, i) => (
+                      <p className='inline'>{c} </p>
+                      ))}
+                      <br />
+                     <span className="time"> <AccessTimeIcon /> { post.publishedAt }</span> 
                     </div>{/* .post */}
             </li>
           ))}
