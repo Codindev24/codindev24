@@ -5,6 +5,7 @@ import useSWR from 'swr';
 import Swr from './Swr.tsx';
 import Notes from './Notes.tsx';
 import Posts from './Posts.tsx';
+import Countdown from 'react-countdown';
 import Hero from './Hero.tsx';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Avatar from '@mui/material/Avatar';
@@ -12,6 +13,16 @@ import Avatar from '@mui/material/Avatar';
 export default function Home() {
   return (
     <div className="home">
+     <div className="spanarferd flex">
+     <div className="eventtitle">Events</div>
+     <div className="event">
+      <h1>
+      <span className="name">Spánarferð eftir </span>
+      <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga.</span></span>
+      
+      </h1>
+      </div>{/* .event */}
+      </div>{/* .spanarferd */}
       <Parallax
         className="welcome"
         blur={0}
@@ -38,11 +49,31 @@ export default function Home() {
         </div>
           <span className="name">Codindev</span> <AccessTimeIcon /> 14:52 11 april 2024</span>
           </h1>
+          <div className="spanarferdslide flex">
+     <div className="eventtitle">Events:</div>
+     <div className="event">
+      <h1>
+      <span className="name">Spánarferð eftir </span>
+      <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga....</span></span>
+      
+      </h1>
+      </div>{/* .event */}
+      </div>{/* .spanarferdslide */}
         </div>
 
         </div>{/* .content */}
 
       </Parallax>
+      <div className="spanarferd flex">
+     <div className="eventtitle">Events</div>
+     <div className="event">
+      <h1>
+      <span className="name">Spánarferð </span>
+      <span className="count"><Countdown date={Date.now() + 4233600000} /></span>
+      
+      </h1>
+      </div>{/* .event */}
+      </div>{/* .spanarferd */}
       <div className="notes">
       <Notes />
       </div>
