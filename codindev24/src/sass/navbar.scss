@@ -66,22 +66,19 @@
 
   .navbar-end {
     button {
-      background: $llpurple;
-      color: white;
+      color: $llpurple;
       @include roboto;
-      padding-top: 5px !important;
+      padding-top: -5px !important;
       padding-bottom: 5px !important;
       padding-left: 15px !important;
       padding-right: 15px !important;
+      margin-top: -8px !important;
       border: 1px solid rgba($color: gray, $alpha: 0.1);
       border-radius: 5px;
 
       &:hover {
         background: $lpurple;
-        color: $llpurple;
-        font-size: 18px;
-        font-weight: 700 !important;
-        border: 3px solid $llpurple;
+        color: white;
       } // &:hover
     } // a.btn
   } // .navbar-end

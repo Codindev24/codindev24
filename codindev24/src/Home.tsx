@@ -44,7 +44,7 @@ export default function Home() {
           <span>
           <div className="avatar">
           <div className="w-5 rounded-full">
-            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocLKsL_BMoM1Evk4fcwUwCFmTvhhrTZd0ahxBBsDjD9AIGEtQTaumA=s288-c-no" />
           </div>
         </div>
           <span className="name">Codindev</span> <AccessTimeIcon /> 14:52 11 april 2024</span>
