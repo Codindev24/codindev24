@@ -1,11 +1,17 @@
 import {React, useEffect, useState } from 'react'
 import createClient from "./client.js"
+import imageUrlBuilder from "@sanity/image-url";
 import Moment from 'react-moment';
 import 'moment-timezone';
 import "./sass/notes.scss";
 import { Link } from "react-router-dom";
 
-function Notes() {
+const builder = imageUrlBuilder(createClient);
+function urlFor(source) {
+ return builder.image(source);
+}
+
+function Notes({ note }) {
  const [allNotesData, setAllNotes] = useState(null);
 
  useEffect(() => {
