@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './Home';
 import './sass/home.scss';
 import Slug from "./posts/Default.tsx";
+import Login from "./Login";
 import Noteslug from "./notes/Default.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:slug" element={ <Slug /> } />
+          <Route path="/login" element={ <Login /> } />
           {/* <Route path="/notes/:slug" element={ <Noteslug /> } /> */}
       </Routes>
       <Footer />

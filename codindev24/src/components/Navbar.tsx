@@ -3,8 +3,28 @@ import { Link } from 'react-router-dom';
 import '../sass/navbar.scss';
 import '../sass/weather.scss';
 import Weather from "./Weather.tsx";
+// firebase
+import { auth } from "../firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import {
+  signOut,
+} from "firebase/auth";
+import PersonIcon from '@mui/icons-material/Person';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function Navbar() {
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const logout = async () => {
+    await signOut(auth);
+  };
+
+  useEffect
+
   return (
    <div>
     <div className="navbar bg-base-100">
@@ -61,9 +81,18 @@ export default function Navbar() {
       {/* .navbar-center */}
 
       <div className="navbar-end">
-        <button>Login</button>
+      {!user ? (
+      <div>
+      <Link className="loginnav" to="/login">Login</Link>
+      {/* <Link className="register" to="/signup">SignUp</Link> */}
       </div>
-      {/* .navbar-end */}
+      ) : (
+      <div>
+        <span className="email"><PersonIcon />{user?.email}</span>
+      </div>
+      )}
+      <div><button className="signout" onClick={logout}><LogoutIcon />SignOut</button></div>
+      </div>{/* .navbar-end */}
     </div>
     <div className="weatherbelow">
       <Weather />

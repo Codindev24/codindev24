@@ -1,0 +1,75 @@
+@import "./base/colors";
+@import "./base/mixins.scss";
+
+.login {
+
+.leftlogin {
+
+img {
+ 
+}// img 
+
+}// .leftlogin
+
+.rightlogin {
+ padding-top: 250px;
+
+ .title {
+  color: $dark;
+  @include oxygenl;
+  font-size: 20px;
+  padding-bottom: 50px;
+ }// .title
+
+.loggainn {
+
+// input boxes
+.MuiBox-root {
+ color: red !important;
+svg {
+
+}// svg
+
+.MuiFormLabel-root .MuiInputLabel-root .MuiInputLabel-formControl .MuiInputLabel-animated .MuiInputLabel-standard .MuiFormLabel-colorPrimary .MuiInputLabel-root .MuiInputLabel-formControl .MuiInputLabel-animated .MuiInputLabel-standard .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+
+
+}// label.MuiFormLabel-root
+
+#input-with-sx-label {
+ color: $dark !important;
+}// #input-with-sx-label 
+
+.MuiInputLabel-root {
+
+}// .MuiInputLabel
+
+.Mui-focused {
+ color: $dark !important;
+}// .Mui-focused
+
+}// .MuiBox-root
+
+.MuiInputBase-root {
+
+::after {
+ border-bottom: 2px solid $llpurple;
+}// ::after
+
+input {
+ border-bottom: 2px solid $llpurple;
+
+}// input
+
+}// .MuiInputBase-root
+
+button.MuiButtonBase-root {
+ color: $dark;
+ margin-top: 50px;
+ width: 40%;
+}// button.MuiButtonBase-root
+
+}// .loggainn
+
+}// .rightlogin
+
+}// .login

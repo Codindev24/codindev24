@@ -65,14 +65,35 @@
   } // .navbar-center
 
   .navbar-end {
+ margin-top: -10px;
+    div {
+    a {
+    &.loginnav {
+    
+    }// &.loginnav
+    }// a
+    span {
+
+    &.email {
+    color: $dark;
+    svg {
+      width: 16px;
+      height: 16px;
+      padding-right: 2px;
+      margin-top: -2px;
+    }// svg
+    svg {
+    color: red !important;
+    }// svg
+    }// &.email
+    }// span
     button {
-      color: $llpurple;
+      color: gray;
       @include roboto;
       padding-top: -5px !important;
       padding-bottom: 5px !important;
       padding-left: 15px !important;
       padding-right: 15px !important;
-      margin-top: -8px !important;
       border: 1px solid rgba($color: gray, $alpha: 0.1);
       border-radius: 5px;
 
@@ -80,6 +101,11 @@
         background: $lpurple;
         color: white;
       } // &:hover
-    } // a.btn
+    svg {
+    width: 16px;
+    height: 16px;
+    }// svg
+    } // button
+    }// div
   } // .navbar-end
 } // .navbar

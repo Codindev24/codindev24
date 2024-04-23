@@ -9,20 +9,38 @@ import Countdown from 'react-countdown';
 import Hero from './Hero.tsx';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Avatar from '@mui/material/Avatar';
+// firebase
+import { auth } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function Home() {
+
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  })
+ 
+  const logout = async () => {
+ 
+  };
+  
   return (
     <div className="home">
-     <div className="spanarferd flex">
-     <div className="eventtitle">Events</div>
-     <div className="event">
-      <h1>
-      <span className="name">Spánarferð eftir </span>
-      <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga.</span></span>
-      
-      </h1>
-      </div>{/* .event */}
-      </div>{/* .spanarferd */}
+      {!user ? (
+      <p>You need to be logged in to view this content!</p>
+      ) : (
+        <div className="spanarferd flex">
+        <div className="eventtitle">Events</div>
+        <div className="event">
+          <h1>
+          <span className="name">Spánarferð eftir </span>
+          <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga.</span></span>
+          
+          </h1>
+          </div>
+          </div>
+      )}
       <Parallax
         className="welcome"
         blur={0}
@@ -49,31 +67,43 @@ export default function Home() {
         </div>
           <span className="name">Codindev</span> <AccessTimeIcon /> 14:52 11 april 2024</span>
           </h1>
+          {!user ? (
+          <p>You need to be logged in to view this content!</p>
+          ) : (  
           <div className="spanarferdslide flex">
-     <div className="eventtitle">Events:</div>
-     <div className="event">
-      <h1>
-      <span className="name">Spánarferð eftir </span>
-      <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga....</span></span>
+        <div className="eventtitle">Events:</div>
+        <div className="event">
+        <h1>
+        <span className="name">Spánarferð eftir </span>
+        <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga....</span></span>
       
       </h1>
-      </div>{/* .event */}
-      </div>{/* .spanarferdslide */}
+      </div>
+      </div>
+      )}
         </div>
 
         </div>{/* .content */}
-
+        {!user ? (
+          1
+         ) : ( 
+          2
+         )}
       </Parallax>
-      <div className="spanarferd flex">
-     <div className="eventtitle">Events</div>
-     <div className="event">
-      <h1>
-      <span className="name">Spánarferð </span>
-      <span className="count"><Countdown date={Date.now() + 4233600000} /></span>
-      
-      </h1>
-      </div>{/* .event */}
-      </div>{/* .spanarferd */}
+      {!user ? (
+      <p>You need to be logged in to view this content!</p>
+      ) : (
+        <div className="spanarferd flex">
+        <div className="eventtitle">Events</div>
+        <div className="event">
+          <h1>
+          <span className="name">Spánarferð eftir </span>
+          <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga.</span></span>
+          
+          </h1>
+          </div>
+          </div>
+      )}
       <div className="notes">
       <Notes />
       </div>
