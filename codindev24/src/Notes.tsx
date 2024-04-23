@@ -26,6 +26,8 @@ function Notes() {
   .catch(console.error);
  }, []);
 
+ if (!allNotesData) return <div className="loading flex justify-center">Loading...</div>;
+
  return (
 
   <div className="notes">
@@ -38,7 +40,7 @@ function Notes() {
 
      <ul className="grid grid-cols-6 gap-2">
      {allNotesData &&
-      allNotesData.map((notes, index) => ( 
+      allNotesData.map((note, index) => ( 
 
        <li key={index}>
 
@@ -48,13 +50,13 @@ function Notes() {
        {/* <a href="#" onClick={() => router.push(`/notes/${notes.slug.current}`)} key={index}>
          {notes.title}
        </a> */}
-       <Link to={'/' + notes.slug} key={notes.slug}>{ notes.title }</Link>
+       <Link to={'/' + note.slug} key={note.slug}>{ note.title }</Link>
 
        </div>{ /* .title */ }
 
        <div className="date items-center text-center">
 
-       { notes.publishedAt }
+       { note.publishedAt }
 
        </div>{ /* .date */ }
 

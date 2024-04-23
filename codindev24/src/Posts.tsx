@@ -33,7 +33,7 @@ useEffect(() => {
  .catch(console.error);
 }, []);
 
-if (!allPostsData) return <div>Loading...</div>;
+if (!allPostsData) return <div className="loading flex justify-center">Loading...</div>;
 
   return (
     <div className="posts">

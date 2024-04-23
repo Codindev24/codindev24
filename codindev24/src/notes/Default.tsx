@@ -36,7 +36,7 @@ useEffect(() => {
  .catch(console.error);
 }, [slug]);
 
-if (!noteData) return <div>Loading...</div>;
+if (!noteData) return <div className="loading flex justify-center">Loading...</div>;
 
  return (
     <div className="defaultpost">
@@ -57,7 +57,11 @@ if (!noteData) return <div>Loading...</div>;
 
           {/* <img src={urlFor(postData.authorImage).url()} alt="authorimage" /> */}
 
-           <div className="category">{noteData.category.title}</div>
+           <div className="category">
+           {noteData.categories.map((c, i) => (
+                <p className='inline'>{c} </p>
+            ))}
+           </div>
 
             <div className="title">{noteData.title}</div>
 

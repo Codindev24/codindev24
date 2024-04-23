@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './Home';
 import './sass/home.scss';
+import './sass/base/base.scss';
 import Slug from "./posts/Default.tsx";
 import Login from "./Login";
-import Noteslug from "./notes/Default.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {

@@ -41,7 +41,7 @@ useEffect(() => {
  .catch(console.error);
 }, [slug]);
 
-if (!postData) return <div>Loading...</div>;
+if (!postData) return <div className="loading flex justify-center">Loading...</div>;
 
  return (
     <div className="defaultpost">

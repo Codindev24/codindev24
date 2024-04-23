@@ -76,6 +76,7 @@
 
     &.email {
     color: $dark;
+    margin-right: 5px;
     svg {
       width: 16px;
       height: 16px;
@@ -90,7 +91,7 @@
     button {
       color: gray;
       @include roboto;
-      padding-top: -5px !important;
+      padding-top: 5px !important;
       padding-bottom: 5px !important;
       padding-left: 15px !important;
       padding-right: 15px !important;

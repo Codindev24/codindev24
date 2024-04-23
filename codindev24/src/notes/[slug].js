@@ -37,7 +37,7 @@ useEffect(() => {
  .catch(console.error);
 }, [slug]);
 
-if (!postData) return <div>Loading...</div>;
+if (!postData) return <div className="loading">Loading...</div>;
 
  return (
     <div className="defaultpost">
