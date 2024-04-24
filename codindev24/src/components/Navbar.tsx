@@ -14,7 +14,6 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function Navbar() {
   const [user, setUser] = useState({});
-  const displayName = user.displayName;
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
