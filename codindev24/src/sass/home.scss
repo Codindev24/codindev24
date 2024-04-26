@@ -3,7 +3,61 @@
 @import 'base/mixins';
 
 .home {
+ .features {
+  background: rgba($color: $dark, $alpha: .7);
+  border-bottom: 6px solid white;
+ .html {
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  h1 {
+  color: white;
+  @include oxygenl;
+  text-align: center;
+  @include box1;
+  }// h1
+ }// .html
+ .js {
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-right: 5px solid white;
+  h1 {
+   color: pink;
+   @include oxygenl;
+   text-align: center;
+   @include box1;
+   }// h1
+ }// .js
+ .css {
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-right: 5px solid white;
+  h1 {
+   color: $lblue;
+   @include oxygenl;
+   text-align: center;
+   @include box1;
+   }// h1
+ }// .css
+ .plugins {
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-right: 5px solid white;
+  h1 {
+   color: $llgreen;
+   @include oxygenl;
+   text-align: center;
+   @include box1;
+   }// h1
+ }// .plugins 
+ }// .features
   .react-parallax.welcome {
+
     image.react-parallax-bgimage {
       width: 100% !important;
     } // image.react-parallax-bgimage
@@ -13,61 +67,61 @@
 
       // latest posts ////////////////////////////////////////////////////////
       .content {
-          .left {
-           color: white;
-           padding-top: 330px;
-           padding-left: 50px;
-           span {
-           color: $lblue;
-           font-weight: 400;
-           }// span
-          }// .left
-          
-          .right {
-           color: white;
-           background: rgba($color: $llpurple, $alpha: .4);
-           padding-top: 300px;
-           padding-bottom: 300px;
-           padding-left: 350px;
-           padding-right: 350px;
-           border-left: 4px solid rgba($color: white, $alpha: .4);
-           .cata {
-           span {
-           &.dev {
-           color: $ryellow;
-           margin-right: 10px;
-           }// &.dev
-           &.news {
-           color: $llgreen;
-           }// &,news
-           }// span
-           }// .cata
-           h1 {
-           small {
-
-           }// small
-           span {
-           span.name {
-
-           }// span.name
-           .avatar {
-            margin-right: 5px;
-            margin-bottom: -20px;
-           div {
-
-           img {
-           }// img
-           }// div
-           }// .avatar 
-           svg {
-           color: $lblue; 
-           width: 15px;
-           height: 15px;
-           margin-top: -3px;
-           }// svg
-           }// span
-           }// h1
-          }// right
+           .left {
+            color: white;
+            padding-top: 330px;
+            padding-left: 50px;
+            span {
+            color: $lblue;
+            font-weight: 400;
+            }// span
+           }// .left
+           
+           .right {
+            color: white;
+            background: rgba($color: $llpurple, $alpha: .4);
+            padding-top: 300px;
+            padding-bottom: 300px;
+            padding-left: 350px;
+            padding-right: 350px;
+            border-left: 4px solid rgba($color: white, $alpha: .4);
+            .cata {
+            span {
+            &.dev {
+            color: $ryellow;
+            margin-right: 10px;
+            }// &.dev
+            &.news {
+            color: $llgreen;
+            }// &,news
+            }// span
+            }// .cata
+            h1 {
+            small {
+ 
+            }// small
+            span {
+            span.name {
+ 
+            }// span.name
+            .avatar {
+             margin-right: 5px;
+             margin-bottom: -20px;
+            div {
+ 
+            img {
+            }// img
+            }// div
+            }// .avatar 
+            svg {
+            color: $lblue; 
+            width: 15px;
+            height: 15px;
+            margin-top: -3px;
+            }// svg
+            }// span
+            }// h1
+           }// right
       } // .content
     } // ..react-parallax-content
   } // .react-parallax.welcome

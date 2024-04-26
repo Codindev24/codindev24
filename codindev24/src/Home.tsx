@@ -27,20 +27,12 @@ export default function Home() {
   
   return (
     <div className="home">
-      {!user ? (
-      <p>You need to be logged in to view this content!</p>
-      ) : (
-        <div className="spanarferd flex">
-        <div className="eventtitle">Events</div>
-        <div className="event">
-          <h1>
-          <span className="name">Spánarferð eftir </span>
-          <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga.</span></span>
-          
-          </h1>
-          </div>
-          </div>
-      )}
+      <div className="features flex justify-between">
+        <div className="html"><h1>Html</h1></div>
+        <div className="js"><h1>Js</h1></div>
+        <div className="css"><h1>Css / Scss</h1></div>
+        <div className="plugins"><h1>Plugins / Scripts</h1></div>
+      </div>{/* .feature */}
       <Parallax
         className="welcome"
         blur={0}
@@ -82,13 +74,7 @@ export default function Home() {
       </div>
       )}
         </div>
-
         </div>{/* .content */}
-        {!user ? (
-          1
-         ) : ( 
-          2
-         )}
       </Parallax>
       {!user ? (
       <p>You need to be logged in to view this content!</p>
