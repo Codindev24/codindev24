@@ -76,20 +76,7 @@ export default function Home() {
         </div>
         </div>{/* .content */}
       </Parallax>
-      {!user ? (
-      <p>You need to be logged in to view this content!</p>
-      ) : (
-        <div className="spanarferd flex">
-        <div className="eventtitle">Events</div>
-        <div className="event">
-          <h1>
-          <span className="name">Spánarferð eftir </span>
-          <span className="count"><Countdown date={Date.now() + 4233600000} /> <span className="name">daga.</span></span>
-          
-          </h1>
-          </div>
-          </div>
-      )}
+
       <div className="notes">
       <Notes />
       </div>
@@ -133,7 +120,52 @@ export default function Home() {
       </div>{/* .devs */}
       <div className="posts">
       <Posts />
-      </div>
+      </div>{/* .posts */}
+       
+       { /* .experience ///////////////////////////////////////////////////////////////////////////////////////////////// */ }
+       <Parallax
+        className="experience"
+        blur={0}
+        bgImage="https://i.natgeofe.com/n/8a4cd21e-3906-4c9d-8838-b13ef85f4b6e/tpc18-outdoor-gallery-1002418-12000351_01.jpg"
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <div className="content grid grid-cols-6">
+
+        <div className="left col-span-4">
+
+          <div className="postone">
+          <h1>
+            <img src="https://img.freepik.com/free-photo/modern-office-space-with-desktops-with-modern-computers-created-with-generative-ai-technology_185193-110089.jpg" alt="" />
+              How to host website on any hosting provider?
+              <br />
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              <br />
+              Iure, quidem! Accusantium amet earum cumque mollitia repellat, 
+              <br />
+              impedit itaque? Illum rerum esse placeat itaque ex expedita 
+              <br />
+              temporibus quis nulla odio deleniti.</span>
+            </h1>
+          </div>{ /* .postone */ }
+          
+        </div>{ /* .left */ }
+
+        <div className="right col-span-2">
+
+        <div className="posttwo">
+            2
+        </div>{ /* .posttwo */ }
+
+        <div className="postthree">
+            3
+        </div>{ /* .postthree */ }
+
+        </div>{ /* .right */ }
+
+        </div>{/* .content */}
+      </Parallax>
+
     </div>
   );
 }

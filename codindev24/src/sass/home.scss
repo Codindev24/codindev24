@@ -252,4 +252,54 @@
     } // ..react-parallax-content
   } // .react-parallax.welcome
   }// .devs
+
+  .react-parallax.experience {
+
+   image.react-parallax-bgimage {
+     width: 100% !important;
+   } // image.react-parallax-bgimage
+
+   .react-parallax-content {
+     
+
+     // latest posts ////////////////////////////////////////////////////////
+     .content {
+          .left {
+           background-color: rgba($color: $dark, $alpha: 0.7);
+          .postone {
+           padding: 20px;
+          img {
+          margin-top: 50px;
+          margin-left: 250px;
+          }// img
+          h1 {
+          @include oxygenb;
+          font-size: 20px;
+          text-align: center;
+          color: white;
+          span {
+          color: white;
+          @include oxygenl;
+          }// span
+          }// h1
+          }// .postone
+          
+          }// .left
+          
+          .right {
+           background-color: rgba($color: $llpurple, $alpha: 0.7);
+           border-left: 3px solid rgba($color: white, $alpha: .4);
+
+           .posttwo {
+
+           }// .postwto
+
+           .postthree {
+
+           }// .postthree
+          }// right
+     } // .content
+   } // ..react-parallax-content
+ } // .react-parallax.experience
+
 } // .home
