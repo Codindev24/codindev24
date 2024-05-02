@@ -267,10 +267,12 @@
           .left {
            background-color: rgba($color: $dark, $alpha: 0.7);
           .postone {
-           padding: 20px;
+           padding: 50px;
           img {
-          margin-top: 50px;
-          margin-left: 250px;
+          width: 80%;
+          height: 450px;
+          margin-top: 80px;
+          margin-left: 90px;
           }// img
           h1 {
           @include oxygenb;
@@ -289,14 +291,70 @@
           .right {
            background-color: rgba($color: $llpurple, $alpha: 0.7);
            border-left: 3px solid rgba($color: white, $alpha: .4);
+           .posts {
+            margin-top: 200px;
+            .posttwo {
+             img {
+              width: 300px;
+              width: 350px;
+             }// img
+             h1 {
+              color: white;
+              text-align: center;
+             p {
 
-           .posttwo {
+             }// p
+             span {
 
-           }// .postwto
+             }// span
+             }// h1
+            }// .postwto
+ 
+            .postthree {
+             h1 {
+              text-align: center;
+              color: white;
+              @include oxygenl;
+             p {
 
-           .postthree {
+             }// p
+             span {
+              @include oxygenl;
+             .prog {
+              background: rgba($color: $dark, $alpha: .2);
+              width: 320px;
+              border: 1px solid rgba($color: gray, $alpha: .1);
+              padding-left: 5px;
+              padding-right: 5px;
+              margin-bottom: 2px;
+             .line {
+              background: rgba($color: gray, $alpha: .7); 
+              color: white;
+              width: 75%;
+             }// .line
+             .linedesign {
+              background: rgba($color: $llpurple, $alpha: .7); 
+              color: white;
+              width: 65%;
+             }// .linedesign
+             .linereact {
+              background: rgba($color: $dark, $alpha: .7); 
+              color: white;
+              width: 65%;
+             }// .linereact
+             .linenext {
+              background: rgba($color: $dark, $alpha: .7); 
+              color: white;
+              width: 55%;
+             }// .linenext
+             .number {
 
-           }// .postthree
+             }//.number
+             }// .prog
+             }// span
+             }// h1
+            }// .postthree
+           }// .posts
           }// right
      } // .content
    } // ..react-parallax-content

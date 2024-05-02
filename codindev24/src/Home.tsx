@@ -126,7 +126,7 @@ export default function Home() {
        <Parallax
         className="experience"
         blur={0}
-        bgImage="https://i.natgeofe.com/n/8a4cd21e-3906-4c9d-8838-b13ef85f4b6e/tpc18-outdoor-gallery-1002418-12000351_01.jpg"
+        bgImage="https://images.squarespace-cdn.com/content/v1/52da9677e4b03d314575985a/1476531432065-5KU3TTZ90TYSFDB54W91/image-asset.jpeg"
         bgImageAlt="the cat"
         strength={200}
       >
@@ -136,16 +136,13 @@ export default function Home() {
 
           <div className="postone">
           <h1>
-            <img src="https://img.freepik.com/free-photo/modern-office-space-with-desktops-with-modern-computers-created-with-generative-ai-technology_185193-110089.jpg" alt="" />
-              How to host website on any hosting provider?
-              <br />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              <br />
-              Iure, quidem! Accusantium amet earum cumque mollitia repellat, 
-              <br />
-              impedit itaque? Illum rerum esse placeat itaque ex expedita 
-              <br />
-              temporibus quis nulla odio deleniti.</span>
+            <img src="https://images.squarespace-cdn.com/content/v1/52da9677e4b03d314575985a/1476531432065-5KU3TTZ90TYSFDB54W91/image-asset.jpeg" alt="" />
+              <p>OUR VALUES</p>
+              <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quidem! <br /> 
+              Accusantium amet earum cumque mollitia repellat, impedit itaque? Illum <br />
+              rerum esse placeat itaque ex expedita temporibus quis nulla odio deleniti.
+              </span>
             </h1>
           </div>{ /* .postone */ }
           
@@ -153,18 +150,78 @@ export default function Home() {
 
         <div className="right col-span-2">
 
-        <div className="posttwo">
-            2
+      <div className="posts">
+
+      <div className="posttwo flex justify-center">
+           <div className="post">
+            <h1>
+              <p>OUR MISSION</p>
+              <span>
+              Intrinsicly engineer one-to-one partnerships <br /> 
+              with error-free customer service. Competently optimize <br />
+              goal-oriented technology via low-risk high-yield materials engage.
+              </span>
+            </h1>
+           </div>{/* .post */}
         </div>{ /* .posttwo */ }
 
-        <div className="postthree">
-            3
+        <div className="postthree flex justify-center">
+         <div className="post">
+            <h1>
+              <p>OUR SKILLS</p>
+              <span>
+              <div className="prog flex justify-between">
+              <div className="line">
+              Development
+              </div>{/* .line */}
+              <div className="number">
+                75%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+
+              <div className="prog flex justify-between">
+              <div className="linedesign">
+              Design
+              </div>{/* .line */}
+              <div className="number">
+                65%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+
+              <div className="prog flex justify-between">
+              <div className="linereact">
+              React.js
+              </div>{/* .line */}
+              <div className="number">
+                65%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+
+              <div className="prog flex justify-between">
+              <div className="linenext">
+              Next.js
+              </div>{/* .line */}
+              <div className="number">
+                55%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+              </span>
+            </h1>
+         </div>{/* .post */}
         </div>{ /* .postthree */ }
+
+      </div>{ /* .posts */}
 
         </div>{ /* .right */ }
 
         </div>{/* .content */}
       </Parallax>
+
+      <div className="moreinfo">
+      
+       <h1 align="center">This is more info</h1>
+
+      </div>{/* .moreinfo */}
 
     </div>
   );
