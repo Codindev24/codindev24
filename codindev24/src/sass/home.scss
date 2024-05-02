@@ -271,6 +271,7 @@
           img {
           width: 80%;
           height: 450px;
+          border: 3px solid rgba($color: white, $alpha: .2);
           margin-top: 80px;
           margin-left: 90px;
           }// img
@@ -328,12 +329,12 @@
               padding-right: 5px;
               margin-bottom: 2px;
              .line {
-              background: rgba($color: gray, $alpha: .7); 
+              background: rgba($color: $dark, $alpha: .7); 
               color: white;
               width: 75%;
              }// .line
              .linedesign {
-              background: rgba($color: $llpurple, $alpha: .7); 
+              background: rgba($color: $dark, $alpha: .7); 
               color: white;
               width: 65%;
              }// .linedesign
@@ -348,8 +349,19 @@
               width: 55%;
              }// .linenext
              .number {
-
              }//.number
+             .numberline {
+              color: $llgreen;
+             }// &.line
+             .numberdesign {
+             color: orange;
+             }// &.linedesign
+             .numberreact {
+              color: orange;
+             }// &.numberreact
+             .numbernext {
+             color: $ryellow;
+             }// &.numbernext
              }// .prog
              }// span
              }// h1

@@ -174,7 +174,7 @@ export default function Home() {
               <div className="line">
               Development
               </div>{/* .line */}
-              <div className="number">
+              <div className="numberline">
                 75%
               </div>{/* .number */}
               </div>{/* .prog*/}
@@ -183,7 +183,7 @@ export default function Home() {
               <div className="linedesign">
               Design
               </div>{/* .line */}
-              <div className="number">
+              <div className="numberdesign">
                 65%
               </div>{/* .number */}
               </div>{/* .prog*/}
@@ -192,7 +192,7 @@ export default function Home() {
               <div className="linereact">
               React.js
               </div>{/* .line */}
-              <div className="number">
+              <div className="numberreact">
                 65%
               </div>{/* .number */}
               </div>{/* .prog*/}
@@ -201,7 +201,7 @@ export default function Home() {
               <div className="linenext">
               Next.js
               </div>{/* .line */}
-              <div className="number">
+              <div className="numbernext">
                 55%
               </div>{/* .number */}
               </div>{/* .prog*/}
