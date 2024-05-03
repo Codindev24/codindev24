@@ -262,6 +262,20 @@ export default function Home() {
         </div>{/* .post */}
         </div>{/* .postfour */}
 
+        <div className="postfive flex justify-center">
+        <div className="post">
+        <h1>
+          <p>Brand New Features</p>
+          <span>
+           Competently transform proactive internal <br />
+           or “organic”. Prospective functionalities <br />
+           for interactive commun generate economica <br />
+           sound infrastructures before process.
+          </span>
+        </h1>
+        </div>{/* .post */}
+        </div>{/* .postfive */}
+
         </div>{/* .run */}
 
         </div>{/* .content */}

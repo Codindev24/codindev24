@@ -374,6 +374,7 @@
             border-left: 3px solid rgba($color: white, $alpha: .4);
           .postfour {
             padding: 40px;
+            margin-top: 55px;
             .post {
             h1 {
             p {
@@ -428,6 +429,23 @@
             }// h1
             }// .post
           }// .postfour
+          .postfive {
+           margin-top: 50px;
+          .post {
+          h1 {
+          p {
+            color: white;
+            @include oxygenb;
+            font-size: 20px;
+            }// p   
+          span {
+          color: white;
+          @include oxygenl;
+          font-size: 16px;
+          }// span
+          }// h1
+          }// .post
+          }// .postfive
       }// .run
      } // .content
    } // ..react-parallax-content
