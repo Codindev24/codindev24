@@ -132,16 +132,17 @@ export default function Home() {
       >
         <div className="content grid grid-cols-6">
 
-        <div className="left col-span-4">
+        <div className="left col-span-2">
 
           <div className="postone">
           <h1>
-            <img src="https://images.squarespace-cdn.com/content/v1/52da9677e4b03d314575985a/1476531432065-5KU3TTZ90TYSFDB54W91/image-asset.jpeg" alt="" />
+            <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="" />
               <p>OUR VALUES</p>
               <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quidem! <br /> 
-              Accusantium amet earum cumque mollitia repellat, impedit itaque? Illum <br />
-              rerum esse placeat itaque ex expedita temporibus quis nulla odio deleniti.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Iure, quidem! Accusantium amet earum cumque mollitia <br />
+              impedit itaque? Illum rerum esse placeat itaque ex <br /> 
+              temporibus quis nulla odio deleniti.
               </span>
             </h1>
           </div>{ /* .postone */ }
@@ -213,6 +214,55 @@ export default function Home() {
       </div>{ /* .posts */}
 
         </div>{ /* .right */ }
+
+        <div className="run col-span-2">
+
+        <div className="postfour flex justify-center">
+        <div className="post">
+          <h1>
+            <p>SKILLS</p>
+            <span>
+            <div className="prog flex justify-between">
+              <div className="line">
+              Development
+              </div>{/* .line */}
+              <div className="numberline">
+                75%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+
+              <div className="prog flex justify-between">
+              <div className="linedesign">
+              Design
+              </div>{/* .line */}
+              <div className="numberdesign">
+                65%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+
+              <div className="prog flex justify-between">
+              <div className="linereact">
+              React.js
+              </div>{/* .line */}
+              <div className="numberreact">
+                65%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+
+              <div className="prog flex justify-between">
+              <div className="linenext">
+              Next.js
+              </div>{/* .line */}
+              <div className="numbernext">
+                55%
+              </div>{/* .number */}
+              </div>{/* .prog*/}
+            </span>
+          </h1>
+        </div>{/* .post */}
+        </div>{/* .postfour */}
+
+        </div>{/* .run */}
 
         </div>{/* .content */}
       </Parallax>

@@ -267,18 +267,14 @@
           .left {
            background-color: rgba($color: $dark, $alpha: 0.7);
           .postone {
-           padding: 50px;
+           padding: 40px;
           img {
-          width: 80%;
-          height: 450px;
+          width: 100%;
           border: 3px solid rgba($color: white, $alpha: .2);
-          margin-top: 80px;
-          margin-left: 90px;
           }// img
           h1 {
           @include oxygenb;
           font-size: 20px;
-          text-align: center;
           color: white;
           span {
           color: white;
@@ -293,7 +289,8 @@
            background-color: rgba($color: $llpurple, $alpha: 0.7);
            border-left: 3px solid rgba($color: white, $alpha: .4);
            .posts {
-            margin-top: 200px;
+            padding: 40px;
+            margin-top: 40px;
             .posttwo {
              img {
               width: 300px;
@@ -302,22 +299,26 @@
              h1 {
               color: white;
               text-align: center;
-             p {
-
-             }// p
+              p {
+                @include oxygenb;
+                font-size: 20px;
+                }// p
              span {
-
+             @include oxygenl;
+             font-size: 16px;
              }// span
              }// h1
             }// .postwto
  
             .postthree {
+              margin-top: 100px;
              h1 {
               text-align: center;
               color: white;
               @include oxygenl;
              p {
-
+             @include oxygenb;
+             font-size: 20px;
              }// p
              span {
               @include oxygenl;
@@ -368,6 +369,66 @@
             }// .postthree
            }// .posts
           }// right
+          .run {
+            background: rgba($color: $llorange, $alpha: .4);
+            border-left: 3px solid rgba($color: white, $alpha: .4);
+          .postfour {
+            padding: 40px;
+            .post {
+            h1 {
+            p {
+             color: white;
+             @include oxygenb;
+             font-size: 20px;
+            }// p   
+            span {
+              .prog {
+                background: rgba($color: $dark, $alpha: .2);
+                width: 320px;
+                border: 1px solid rgba($color: gray, $alpha: .1);
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-bottom: 2px;
+               .line {
+                background: rgba($color: $dark, $alpha: .7); 
+                color: white;
+                width: 75%;
+               }// .line
+               .linedesign {
+                background: rgba($color: $dark, $alpha: .7); 
+                color: white;
+                width: 65%;
+               }// .linedesign
+               .linereact {
+                background: rgba($color: $dark, $alpha: .7); 
+                color: white;
+                width: 65%;
+               }// .linereact
+               .linenext {
+                background: rgba($color: $dark, $alpha: .7); 
+                color: white;
+                width: 55%;
+               }// .linenext
+               .number {
+               }//.number
+               .numberline {
+                color: $llgreen;
+               }// &.line
+               .numberdesign {
+               color: orange;
+               }// &.linedesign
+               .numberreact {
+                color: orange;
+               }// &.numberreact
+               .numbernext {
+               color: $ryellow;
+               }// &.numbernext
+               }// .prog
+            }// span
+            }// h1
+            }// .post
+          }// .postfour
+      }// .run
      } // .content
    } // ..react-parallax-content
  } // .react-parallax.experience
