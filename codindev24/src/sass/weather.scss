@@ -59,7 +59,6 @@ ul.nameheatclouds {
  background: rgba($color: $dark, $alpha: .7);
 
 span {// for flex
- padding-left: 10px;
 
 li {
 
@@ -67,6 +66,10 @@ li {
  color: white;
  @include oxygenb;
  font-size: 24px;
+ @include textdown;
+ letter-spacing: -2px;
+ padding-top: 5px;
+ padding-bottom: 5px;
 }// &.name ////////////////
 
 &.temp { ///////////////// temp
@@ -182,7 +185,7 @@ span {
  }// &.name
  
  &.hum {
-  color: $nicedd;
+  color: rgba($color: white, $alpha: .5);
   @include oxygenb;
   font-size: 64px;
   margin-left: -19px;
@@ -204,6 +207,149 @@ span {
 }// ul.nameheatclouds
 
  }// .new
+
+ //////////////////////////////////////// below //////////////////////////////////////////////////
+  ul.below {
+   background: rgba($color: $dark, $alpha: .7);
+  
+  span {// for flex
+  
+  li {
+  
+  &.mintemp { ///////////////// mintemp
+   margin-top: -75px;
+   margin-left: 35px;
+  
+  span {
+   @include oxygenb;
+  
+  &.name {
+   color: $nice;
+   font-size: 16px;
+   margin-bottom: -6px;
+   margin-right: -48px;
+   letter-spacing: -1px;
+  }// &.name
+  
+  &.mintemp {
+   color: $lblue;
+   @include oxygenb;
+   font-size: 34px;
+   margin-left: -17px;
+  
+  }// span.mintemp
+  
+  &.cells {
+   color: white;
+   margin-left: -12px;
+  }// &.cells
+  
+  }// span
+  
+  }// &.mintemp /////////////////////////
+  
+  &.feels { /////////////////////// feels
+  
+  span {
+   @include oxygenb;
+  
+  &.name {
+   color: $nice;
+   font-size: 16px;
+   @include textdown;
+   margin-bottom: 6px;
+   letter-spacing: -1px;
+  }// &.name
+  
+  &.feels {
+   color: $lblue;
+   @include oxygenb;
+   font-size: 64px;
+   margin-left: -19px;
+  }// &.feels
+  
+  &.cells {
+   color: white;
+   margin-left: -12px;
+  }// &.cells
+  
+  }// span 
+  
+  }// &.feels //////////////////// feels
+  
+  &.clouds { //////////////////// clouds
+  
+  span {
+   color: $nice;
+   @include oxygenb;
+   font-size: 64px;
+  }// span
+  
+  }// &.clouds ///////////////// clouds
+  
+  &.wind { //////////////////// wind
+  
+  span {
+   @include oxygenb;
+  
+  &.name {
+   color: $nice;
+   font-size: 16px;
+   @include textdown;
+   margin-bottom: 6px;
+   letter-spacing: -1px;
+  }// &.name
+  
+  &.wind {
+   color: white;
+   @include oxygenb;
+   font-size: 64px;
+   margin-left: -19px;
+  }// &.wind
+  
+  &.cells {
+   color: white;
+   margin-left: -10px;
+  }// &.cells
+  
+  }// span 
+  
+  }// &.wind ///////////////// wind
+  
+  &.hum { /////////////////// hum
+  
+  span {
+   @include oxygenb;
+  
+   &.name {
+    color: $nice;
+    font-size: 16px;
+    @include textdown;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+   }// &.name
+   
+   &.hum {
+    color: rgba($color: white, $alpha: .5);
+    @include oxygenb;
+    font-size: 64px;
+    margin-left: -19px;
+   }// &.hum
+   
+   &.cells {
+    color: white;
+    margin-left: -10px;
+   }// &.cells
+  
+  }// span
+  
+  }// &.hum //////////////// hum
+  
+  }// li
+  
+  }// span
+  
+  }// ul.below
  
  ///////////////////////////// left ///////////////////////
 .left {

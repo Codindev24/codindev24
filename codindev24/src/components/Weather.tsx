@@ -71,7 +71,7 @@ function Navbar() {
              
              <ul className="below">
              <span className="flex justify-between">
-             <li className="cmin">{data.main ? <span>Min Temp <span className="tempdatamin">{data.main.temp_min}</span><span className="cels"> °c</span></span> : null}</li>
+             <li className="mintemp">{data.main ? <span><span className="name">Min Temp</span> <span className="mintemp">{data.main.temp_min}</span><span className="cells"> °c</span></span> : null}</li>
              <li className="cmax">{data.main ? <span>Max Temp <span className="tempdatamax">{data.main.temp_max}</span><span className="cels"> °c</span></span> : null}</li>
              <li className="windgust">{data.wind ? <p className='bold'><span className="wind">Wind gust</span> <span className="winddata">{data.wind.gust.toFixed()}</span> <span className="cells">m/s</span></p> : null}</li>
              <li className="sea">{data.main ? <p className='bold'><span className="hum">Visibility</span> <span className="tempdatamax">{data.visibility} <span className="km">km</span></span></p> : null}</li>
