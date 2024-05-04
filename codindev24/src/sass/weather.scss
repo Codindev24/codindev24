@@ -43,11 +43,9 @@
 
  ///////////////////////////// vedrid ///////////////////////
 .vedrid {
- background: rgba($color: $dark, $alpha: .6); 
+ background: white; 
  min-width:860px !important;
  border: 1px solid rgba($color: gray, $alpha: .1) !important;
- padding-left: 5px;
- padding-right: 5px;
  margin-top: 8px;
  margin-bottom: -6px !important;
  box-shadow: 3px 1px 3px $lpurple;
@@ -56,29 +54,38 @@
  
  ///////////////////////////// left ///////////////////////
 .left {
- width: 100%;
  padding: 5px;
+ @include box;
 
 ul.nameheatclouds {
-
+ background: $llpurple;
 span {
   
 li {
- color: white;
+ color: $dark;
  float: left;
  font-size: 18px;
  font-weight: 600;
- @include source;
+ @include oxygenl;
 
- @include source;
+ @include oxygenl;
  padding-right: 4px;
  padding-left: 3px;
 
 span {
- color: $lblue;
+ color: $dark;
+
+&.cells {
+
+span.ms {
+ color: white;
+ font-size: 12px;
+}// span.ms
+
+}// &.cells
 
 &.tempdata {
- color: white;
+ color: $llpurple;
  font-size: 20px;
  font-weight: 600;
 }// &.tempdata
@@ -86,43 +93,65 @@ span {
 }// span
 
 &.name {
- color: white;
- font-weight: 400;
+ color:  white;
+ @include oxygenb;
+ font-size: 28px;
+ padding-left: 5px;
 }// &.name 
    
 &.c {
- color: rgba($color: white, $alpha: .8);
- font-weight: 600;
+ color: rgba($color: $dark, $alpha: .8);
+ @include oxygenb;
+ span {
+ color: white;
+ @include oxygenb;
+ &.tempdata {
+ color: $lblue;
+ font-size: 28px;
+ }// &.tempdata
+ &.cels {
+ color: white;
+ @include oxygenl;
+ }// .cels
+ }// span
 }// &.c
 
 &.feels {
  color: white;
- font-weight: 600;
+ @include oxygenb;
 
 span.feelsdata {
  color: $lblue;
+ font-size: 28px;
 }// span.feelsdata
 
 }// &.feels
 
 &.snow {
  color: white;  
- font-weight: 600;
+ @include oxygenb;
+ font-size: 28px;
+
+ p {
+
+ }// p
 }// &,snow
 
 &.w {
- color: rgba($color: $dark, $alpha: .8);
- font-weight: 600;
+ color: white;
+ @include oxygenb;
 
 p {
 
 span.wind {
  color: white;
+ @include oxygenb;
 
 }// span.wind
 
 span.winddata {
  color: $lblue;
+ font-size: 28px;
 }// &.winddata 
 
 }// p
@@ -130,21 +159,33 @@ span.winddata {
 }// &.w
 
 &.hum {
- color: white;  
+ color: $llpurple;  
  font-weight: 400;
 
 p {
 
 span.hum {
- color: $lblue;
+ color: white;
+ @include oxygenb;
+
 }// span.hum
+
+span.numb {
+color: $lblue;
+font-size: 28px;
+}// span.numb
+
+span.perc {
+color: white;
+font-size: 12px;
+}// span.perc
 
 }// p 
 
 }// &.hum
 
 &.sun {
- font-weight: 400;
+
 
 span.sun {
 color: $dark;
@@ -159,8 +200,9 @@ svg {
 }// svg
 
 span.cels {
- color: white;
- margin-left: 3px;
+  color: white !important;
+  @include oxygenl;
+  font-size: 12px;
 }// span.cels
 
 }// li
@@ -170,16 +212,18 @@ span.cels {
 }// ul.nameheatclouds
 
 ul.below {
- background: rgba($color: $dark, $alpha: .4);
+ background: gray;
  margin-top: -15px !important;
  padding: 2px;
+ border-top: 1px solid gray;
+ @include box;
 
 li {
  color: $dark;
  float: left;
  font-size: 18px;
  font-weight: 600;
- @include source;
+ @include oxygenl;
  padding-right: 10px;
  padding-left: 10px;
 
