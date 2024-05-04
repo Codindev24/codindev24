@@ -52,7 +52,37 @@ function Navbar() {
 
         {data.name !== undefined &&
         
-          <div className="vedrid hover:shadow-indigo-500/40">
+          <div className="vedrid">
+
+          {/* /////////////////////////////////////////////// NEW ///////////////////////////////////////////////////////////////////////// */}
+
+           <div className="new">
+
+           <ul className="nameheatclouds">
+               <span className="flex">
+               <li className="name">{data.name}</li>
+               <li className="temp">{data.main ? <span><span className="name">Temp</span><span className="temp">{data.main.temp.toFixed()}</span> <span className="cells">°c</span></span> : null}</li>
+               <li className="feels">{data.main ? <span><span className="name">Feels</span> <span className="feels">{data.main.feels_like.toFixed()}</span><span className="cells"> °c</span></span> : null}</li>
+               <li className="clouds">{data.weather ? <span>{data.weather[0].main}</span> : null}</li>
+               <li className="wind">{data.wind ? <span><span className="name">Wind</span> <span className="wind">{data.wind.speed.toFixed()}</span><span className="cells">m/s</span></span> : null}</li>
+               <li className="hum">{data.main ? <span><span className="name">Hum</span> <span className="hum">{data.main.humidity}</span><span className="cells">%</span></span> : null}</li>
+               </span>
+             </ul>
+             
+             <ul className="below">
+             <span className="flex justify-between">
+             <li className="cmin">{data.main ? <span>Min Temp <span className="tempdatamin">{data.main.temp_min}</span><span className="cels"> °c</span></span> : null}</li>
+             <li className="cmax">{data.main ? <span>Max Temp <span className="tempdatamax">{data.main.temp_max}</span><span className="cels"> °c</span></span> : null}</li>
+             <li className="windgust">{data.wind ? <p className='bold'><span className="wind">Wind gust</span> <span className="winddata">{data.wind.gust.toFixed()}</span> <span className="cells">m/s</span></p> : null}</li>
+             <li className="sea">{data.main ? <p className='bold'><span className="hum">Visibility</span> <span className="tempdatamax">{data.visibility} <span className="km">km</span></span></p> : null}</li>
+             <li className="sea">{data.main ? <span>Sea Level <span className="tempdatamax">{data.main.sea_level}</span></span> : null}</li>
+             <li className="sea">{data.main ? <span>Updated <span className="tempdatamax">{data.lastupdate}</span></span> : null}</li>
+             </span>
+             </ul>
+
+           </div>{/* .new */}
+
+           {/* /////////////////////////////////////////////// OLD ///////////////////////////////////////////////////////////////////////// */}
 
             <div className="left">
               <ul className="nameheatclouds">
@@ -66,20 +96,18 @@ function Navbar() {
                 <li className="hum">{data.main ? <p className='bold'><span className="hum">Hum</span> <span className="numb">{data.main.humidity}</span><span className="perc">%</span></p> : null}</li>
                 </span>
               </ul>
-              <br />
               <ul className="below">
               <span className="flex justify-between">
               <li className="cmin">{data.main ? <span>Min Temp <span className="tempdatamin">{data.main.temp_min}</span><span className="cels"> °c</span></span> : null}</li>
               <li className="cmax">{data.main ? <span>Max Temp <span className="tempdatamax">{data.main.temp_max}</span><span className="cels"> °c</span></span> : null}</li>
               <li className="windgust">{data.wind ? <p className='bold'><span className="wind">Wind gust</span> <span className="winddata">{data.wind.gust.toFixed()}</span> <span className="cells">m/s</span></p> : null}</li>
-              <li className="sea">{data.main ? <p className='bold'><span className="hum">Visibility</span> <span className="tempdatamax">{data.visibility} km</span></p> : null}</li>
+              <li className="sea">{data.main ? <p className='bold'><span className="hum">Visibility</span> <span className="tempdatamax">{data.visibility} <span className="km">km</span></span></p> : null}</li>
               <li className="sea">{data.main ? <span>Sea Level <span className="tempdatamax">{data.main.sea_level}</span></span> : null}</li>
               <li className="sea">{data.main ? <span>Updated <span className="tempdatamax">{data.lastupdate}</span></span> : null}</li>
               </span>
               </ul>
 
-            </div>
-
+            </div>{/* .left */}
 
           </div>/* .vedrid */
         }
