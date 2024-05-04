@@ -264,12 +264,13 @@
 
      // latest posts ////////////////////////////////////////////////////////
      .content {
+           border-top: 3px solid rgba($color: $lpurple, $alpha: .4);
+           border-bottom: 3px solid rgba($color: $lpurple, $alpha: .4);
           .left {
            background-color: rgba($color: $dark, $alpha: 0.7);
           .postone {
            padding: 40px;
           img {
-          width: 100%;
           border: 3px solid rgba($color: white, $alpha: .2);
           }// img
           h1 {

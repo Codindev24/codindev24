@@ -3,7 +3,9 @@
 @import './base/base.scss';
 
 .posts {
-
+ margin-bottom: 15px;
+.between {
+ margin-bottom: -15px;
 .posttitle {
  background: rgba($color: $DarkMagenta, $alpha: .4);   
  color: white;
@@ -11,10 +13,9 @@
  font-size: 28px;
  font-weight: 400;
  text-align: center;
- padding-top: 150px;
+ padding-top: 15%;
  padding-left: 30px;
  padding-right: 30px;
- margin-top: -20px;
 }// .posttitle
 
 .post {
@@ -61,5 +62,5 @@ svg {
 }// span.time
 
 }// .post
- 
+}// .between
 }// .posts
