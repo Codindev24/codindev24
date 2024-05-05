@@ -60,7 +60,7 @@ function Navbar() {
 
            <ul className="nameheatclouds">
                <span className="flex">
-               <li className="name">{data.name}</li>
+               <li className="name"> <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} height="70px" /> {data.name}</li>
                <li className="temp">{data.main ? <span><span className="name">Temp</span><span className="temp">{data.main.temp.toFixed()}</span> <span className="cells">°c</span></span> : null}</li>
                <li className="feels">{data.main ? <span><span className="name">Feels</span> <span className="feels">{data.main.feels_like.toFixed()}</span><span className="cells"> °c</span></span> : null}</li>
                <li className="clouds">{data.weather ? <span>{data.weather[0].main}</span> : null}</li>
@@ -71,7 +71,7 @@ function Navbar() {
              
              <ul className="below">
              <span className="flex justify-between">
-             <li className="mintemp">{data.main ? <span><span className="name">Min Temp</span> <span className="mintemp">{data.main.temp_min}</span><span className="cells"> °c</span></span> : null}</li>
+             <li className="mintemp">{data.main ? <span><span className="mintemp">{data.main.temp_min}</span><span className="cells"> °c</span> <br /> <span className="name">Min Temp</span></span> : null}</li>
              <li className="cmax">{data.main ? <span>Max Temp <span className="tempdatamax">{data.main.temp_max}</span><span className="cels"> °c</span></span> : null}</li>
              <li className="windgust">{data.wind ? <p className='bold'><span className="wind">Wind gust</span> <span className="winddata">{data.wind.gust.toFixed()}</span> <span className="cells">m/s</span></p> : null}</li>
              <li className="sea">{data.main ? <p className='bold'><span className="hum">Visibility</span> <span className="tempdatamax">{data.visibility} <span className="km">km</span></span></p> : null}</li>
