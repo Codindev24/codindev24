@@ -61,14 +61,14 @@
  ul.iconname {
   background: rgba($color: $dark, $alpha: .7);
   width: 100%; 
-  padding-top: 28px;
+  padding-top: 20px;
   margin-left: -15px;
   span {// for flex
 
    li {
    
    &.name { ///////////// name
-    color: white;
+    color: rgba($color: white, $alpha: .9);
     @include oxygenb;
     font-size: 34px;
     letter-spacing: -2px;
@@ -84,7 +84,7 @@
     img {
      width: 50px;
      height: 50px;
-     margin-top: -2px;
+     margin-top: -10px;
      }// img
    }// span
    }// &.icon
@@ -98,7 +98,7 @@
 ul.nameheatclouds {
 background: rgba($color: $dark, $alpha: .7); 
 width: 100%;
-padding-top: 10px;
+padding-top: 5px;
 padding-left: 0px;
 padding-right: 15px;
 border-left: 3px solid white;
@@ -125,10 +125,10 @@ span {
 
 &.name {
  color: $afd;
- font-size: 16px;
+ font-size: 12px;
  @include textdown;
  letter-spacing: -1px;
- margin-bottom: -6px;
+ margin-bottom: 0px;
 }// &.name
 
 &.temp {
@@ -140,8 +140,9 @@ span {
 
 p.cells {
   color: rgba($color: white, $alpha: .7);
-  margin-left: 40px !important;
-  margin-top: -44px !important;
+  font-size: 12px;
+  margin-left: 31px !important;
+  margin-top: -41px !important;
  }// p.cells
 
 }// span
@@ -170,30 +171,17 @@ span {
 
 p.cells {
  color: rgba($color: white, $alpha: .7);
- @include oxygenl;
- margin-left: 40px !important;
- margin-top: -44px !important;
+ font-size: 12px;
+ margin-left: 35px !important;
+ margin-top: -41px !important;
 }// p.cells
 
 }// span 
 
 }// &.feels //////////////////// feels
 
-&.clouds { //////////////////// clouds
-  padding-left: 5px;
-  padding-right: 5px;
-
-span {
- color: $nice;
- @include oxygenb;
- font-size: 34px;
-}// span
-
-}// &.clouds ///////////////// clouds
-
-&.wind { //////////////////// wind
-  padding-left: 5px;
-  padding-right: 5px;
+&.mintemp { ///////////////// mintemp
+ padding-left: 5px;
 
 span {
 
@@ -201,55 +189,61 @@ span {
  color: $afd;
  font-size: 16px;
  @include textdown;
+ margin-bottom: 1px;
  letter-spacing: -1px;
- margin-bottom: -9px;
 }// &.name
 
-&.wind {
+&.mintemp {
  color: $nice;
+ @include oxygenb;
  font-size: 34px;
- margin-left: -10px;
-}// &.wind
+ margin-left: -5px;
+
+}// span.mintemp
 
 p.cells {
-  color: rgba($color: white, $alpha: .7);
-  @include oxygenl;
-  margin-left: 40px !important;
-  margin-top: -44px !important;
- }// p.cells
-
-}// span 
-
-}// &.wind ///////////////// wind
-
-&.hum { /////////////////// hum
-  padding-left: 5px;
-
-span {
-
- &.name {
-  color: $afd;
-  font-size: 14px;
-  @include textdown;
-  letter-spacing: -1px;
-  margin-bottom: -2px;
- }// &.name
- 
- &.hum {
-  color: $nice;
-  font-size: 34px;
-  margin-left: -10px;
- }// &.hum
- 
- p.cells {
-  color: rgba($color: white, $alpha: .7);
-  margin-left: 56px !important;
-  margin-top: -44px !important;
- }// p.cells
+ color: rgba($color: white, $alpha: .7);
+ font-size: 12px;
+ margin-left: 78px !important;
+ margin-top: -41px !important;
+}// p.cells
 
 }// span
 
-}// &.hum //////////////// hum
+}// &.mintemp /////////////////////////
+
+&.maxtemp { ///////////////// maxtemp
+ padding-left: 5px;
+
+span {
+
+&.name {
+ color: $afd;
+ font-size: 16px;
+ @include textdown;
+ margin-bottom: -2px;
+ margin-right: -3px;
+ letter-spacing: -1px;
+}// &.name
+
+&.maxtemp {
+ color: $nice;
+ @include oxygenb;
+ font-size: 34px;
+ margin-left: -8px;
+
+}// span.maxtemp
+
+p.cells {
+ color: rgba($color: white, $alpha: .7);
+ font-size: 12px;
+ margin-left: 79px !important;
+ margin-top: -41px !important;
+}// p.cells
+
+}// span
+
+}// &.maxtemp /////////////////////////
 
 }// li
 
@@ -264,77 +258,48 @@ span {
    background: rgba($color: $dark, $alpha: .7);
    width: 100%; 
    border-left: 3px solid white;
-   padding-top: 10px;
+   padding-top: 5px;
    padding-left: 10px;
    padding-right: 10px;
 
   span {// for flex
   
   li {
-  
-  &.mintemp { ///////////////// mintemp
-    padding-left: 5px;
-  
-  span {
-  
-  &.name {
-    color: $afd;
-    font-size: 16px;
-    @include textdown;
-    margin-bottom: 1px;
-    letter-spacing: -1px;
-  }// &.name
-  
-  &.mintemp {
-    color: $nice;
-    @include oxygenb;
-    font-size: 34px;
-    margin-left: -5px;
-  
-  }// span.mintemp
-  
-  p.cells {
-    color: rgba($color: white, $alpha: .7);
-    margin-left: 80px !important;
-    margin-top: -45px !important;
-   }// p.cells
-  
-  }// span
-  
-  }// &.mintemp /////////////////////////
-  
-  &.maxtemp { ///////////////// mintemp
-    padding-left: 5px;
-  
-  span {
-  
-  &.name {
-    color: $afd;
-    font-size: 16px;
-    @include textdown;
-    margin-bottom: -2px;
-    letter-spacing: -1px;
-  }// &.name
-  
-  &.maxtemp {
-    color: $nice;
-    @include oxygenb;
-    font-size: 34px;
-    margin-left: -8px;
-  
-  }// span.mintemp
-  
-  p.cells {
-    color: rgba($color: white, $alpha: .7);
-    margin-left: 80px !important;
-    margin-top: -45px !important;
-   }// p.cells
-  
-  }// span
-  
-  }// &.maxtemp /////////////////////////
 
-  &.windgust { ///////////////// mintemp
+   &.wind { //////////////////// wind
+    padding-left: 5px;
+    padding-right: 5px;
+  
+  span {
+  
+  &.name {
+   color: $afd;
+   font-size: 12px;
+   @include textdown;
+   letter-spacing: -1px;
+   margin-bottom: 0px;
+   margin-right: 1px;
+  }// &.name
+  
+  &.wind {
+   color: $nice;
+   font-size: 34px;
+   margin-left: -10px;
+  }// &.wind
+  
+  p.cells {
+    color: rgba($color: white, $alpha: .7);
+    font-size: 12px;
+    @include oxygenl;
+    margin-left: 31px !important;
+    margin-top: -42px !important;
+   }// p.cells
+  
+  }// span 
+  
+  }// &.wind ///////////////// wind
+
+  &.windgust { ///////////////// windgust
     padding-left: 5px;
   
   span {
@@ -365,6 +330,48 @@ span {
   
   }// &.windgust /////////////////////////
 
+  &.clouds { //////////////////// clouds
+   padding-left: 5px;
+   padding-right: 5px;
+ 
+ span {
+  color: $nice;
+  @include oxygenb;
+  font-size: 34px;
+ }// span
+ 
+ }// &.clouds ///////////////// clouds
+
+  &.hum { /////////////////// hum
+   padding-left: 5px;
+ 
+ span {
+ 
+  &.name {
+   color: $afd;
+   font-size: 14px;
+   @include textdown;
+   letter-spacing: -1px;
+   margin-bottom: -2px;
+  }// &.name
+  
+  &.hum {
+   color: $nice;
+   font-size: 34px;
+   margin-left: -10px;
+  }// &.hum
+  
+  p.cells {
+   color: rgba($color: white, $alpha: .7);
+   font-size: 12px;
+   margin-left: 51px !important;
+   margin-top: -41px !important;
+  }// p.cells
+ 
+ }// span
+ 
+ }// &.hum //////////////// hum 
+
   &.dist { ///////////////// dist / Visibility
     padding-left: 5px;
   
@@ -388,8 +395,9 @@ span {
   
   p.cells {
     color: rgba($color: white, $alpha: .7);
-    margin-left: 120px !important;
-    margin-top: -45px !important;
+    font-size: 12px;
+    margin-left: 117px !important;
+    margin-top: -41px !important;
    }// p.cells
   
   }// span
@@ -419,8 +427,9 @@ span {
   
   p.cells {
     color: rgba($color: white, $alpha: .7);
-    margin-left: 91px !important;
-    margin-top: -45px !important;
+    font-size: 12px;
+    margin-left: 88px !important;
+    margin-top: -41px !important;
    }// p.cells
   
   }// span

@@ -72,17 +72,27 @@ function Navbar() {
                <span className="flex justify-evenly">
                <li className="temp">{data.main ? <span><span className="name">Temp</span><span className="temp">{data.main.temp.toFixed()}</span> <p className="cells">°c</p></span> : null}</li>
                <li className="feels">{data.main ? <span><span className="name">Feel</span> <span className="feels">{data.main.feels_like.toFixed()}</span><p className="cells"> °c</p></span> : null}</li>
-               <li className="clouds">{data.weather ? <span>{data.weather[0].main}</span> : null}</li>
-               <li className="wind">{data.wind ? <span><span className="name">Wind</span> <span className="wind">{data.wind.speed.toFixed()}</span><p className="cells">m/s</p></span> : null}</li>
-               <li className="hum">{data.main ? <span><span className="name">Hum</span> <span className="hum">{data.main.humidity}</span><p className="cells">%</p></span> : null}</li>
+               </span>
+             </ul>
+
+             <ul className="nameheatclouds">
+               <span className="flex justify-evenly">
+               <li className="mintemp">{data.main ? <span><span className="name">Min</span><span className="mintemp">{data.main.temp_min}</span><p className="cells"> °c</p></span> : null}</li>
+             <li className="maxtemp">{data.main ? <span><span className="name">Max</span> <span className="maxtemp">{data.main.temp_max}</span><p className="cells"> °c</p></span> : null}</li>
                </span>
              </ul>
              
              <ul className="below">
              <span className="flex justify-evenly">
-             <li className="mintemp">{data.main ? <span><span className="name">Min</span><span className="mintemp">{data.main.temp_min}</span><p className="cells"> °c</p></span> : null}</li>
-             <li className="maxtemp">{data.main ? <span><span className="name">Max</span> <span className="maxtemp">{data.main.temp_max}</span><p className="cells"> °c</p></span> : null}</li>
+             <li className="wind">{data.wind ? <span><span className="name">Wind</span> <span className="wind">{data.wind.speed.toFixed()}</span><p className="cells">m/s</p></span> : null}</li>
              <li className="windgust">{data.wind ? <span><span className="name">Gust</span> <span className="windgust">{data.wind.gust.toFixed()}</span> <p className="cells">m/s</p></span> : null}</li>
+             </span>
+             </ul>
+
+             <ul className="below">
+             <span className="flex justify-evenly">
+             <li className="clouds">{data.weather ? <span>{data.weather[0].main}</span> : null}</li>
+             <li className="hum">{data.main ? <span><span className="name">Hum</span> <span className="hum">{data.main.humidity}</span><p className="cells">%</p></span> : null}</li>
              </span>
              </ul>
 
