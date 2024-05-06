@@ -51,21 +51,21 @@ export default function Navbar() {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 absolute z-20"
           >
             <li>
-              <a>Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a>Tyvek/Typar</a>
+              <a>Posts</a>
               <ul className="p-2">
                 <li>
-                  <a>Make a Siding</a>
+                  <a href="/notesmain">Notes</a>
                 </li>
                 <li>
-                  <a>What we Provide</a>
+                  <a href="/postsmain">Posts</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Contact us</a>
+              <a>Contact</a>
             </li>
           </ul>
         </div>

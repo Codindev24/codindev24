@@ -1,0 +1,117 @@
+@import './base/colors.scss';
+@import './base/mixins.scss';
+@import './base/base.scss';
+
+.notes {
+
+.sidebar {
+ padding: 10px;
+h1 {
+ text-align: center;
+}// h1
+
+}// .sidebar
+
+
+.notes {
+
+ul.notee {
+
+li {
+ background: rgba($color: $nice, $alpha: .2);
+ border: 1px solid rgba($color: $nice, $alpha: .3);
+}// li
+
+}// ul.notee
+
+ .note {
+  padding-bottom: 5px;
+  //border-bottom: 1px solid rgba($color: gray, $alpha: .3);
+ 
+ .title {
+  color: $dark;
+  @include oxygenl;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px;
+  
+ a {
+  text-decoration: none;
+ 
+ &:hover {
+  color: white;
+  background: rgba($color: $llpurple, $alpha: .4);
+  padding: 2px;
+ }// &:hover 
+ 
+ }// a
+ 
+ }// .title
+
+span.note {
+ margin-top: -10px;
+
+span.note {
+ color: $nice;
+ @include oxygenl;
+ font-size: 12px;
+}// span.note
+
+span.id {
+ color: $nice;
+ margin-top: -14px;
+
+svg {
+ width: 14px;
+ height: 14px;
+}// svg
+
+}// span.id
+
+ }// span.note
+ 
+ .date {
+  color: $llpurple;
+  @include source;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: -10px !important;
+ 
+ .datetime {
+  color: $dark;
+  @include oxygenl;
+  font-size: 13px;
+ svg {
+ color: $nice;
+ width: 14px;
+ height: 14px;
+ margin-top: -2px !important;
+ margin-left: 5px;
+ margin-right: 2px;
+ }// svg 
+
+ }// .datetime
+ 
+ }// .date
+ 
+ .clock {
+  @include source;
+  font-weight: 300;
+  padding: 15px;
+ 
+ time.timi {
+  color: $lpurple;
+  padding-right: 10px;
+ }// time.timi
+ 
+ }// clock
+ 
+ }// .note
+
+}// .notes
+
+.right {
+
+}// .right
+
+}// .notes

@@ -1,0 +1,66 @@
+@import './base/colors.scss';
+@import './base/mixins.scss';
+@import './base/base.scss';
+
+.posts {
+ margin-bottom: 15px;
+.between {
+ margin-bottom: -15px;
+.posttitle {
+ background: rgba($color: $DarkMagenta, $alpha: .4);   
+ color: white;
+ @include source;
+ font-size: 28px;
+ font-weight: 400;
+ text-align: center;
+ padding-top: 15%;
+ padding-left: 30px;
+ padding-right: 30px;
+}// .posttitle
+
+.post {
+ margin-top: 20px;
+ margin-left: 15px;
+ margin-right: 15px;
+
+img {
+ min-width: 100% !important;
+ min-height: 158px;
+ max-height: 158px;
+}// img 
+
+.titlelink {
+
+span {
+ @include oxygenb;
+}// span
+
+a {
+ color: gray;
+ padding-left: 20px;
+}// a
+
+}// .titlelink
+
+p.inline {// categories
+ color: rgba($color: $llpurple, $alpha: .9);
+ @include oxygenr;
+}// p.inline
+
+span.time {
+ color: gray;
+ @include oxygenl;
+ font-size: 14px;
+
+svg {
+ color: $dark;
+ width: 14px;
+ height: 14px;
+ margin-top: -2px;
+}// svg
+
+}// span.time
+
+}// .post
+}// .between
+}// .posts
