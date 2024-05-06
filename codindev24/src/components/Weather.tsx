@@ -77,8 +77,8 @@ function Navbar() {
 
              <ul className="nameheatclouds">
                <span className="flex justify-evenly">
-               <li className="mintemp">{data.main ? <span><span className="name">Min</span><span className="mintemp">{data.main.temp_min}</span><p className="cells"> °c</p></span> : null}</li>
-             <li className="maxtemp">{data.main ? <span><span className="name">Max</span> <span className="maxtemp">{data.main.temp_max}</span><p className="cells"> °c</p></span> : null}</li>
+               <li className="mintemp">{data.main ? <span><span className="name">Min</span><span className="mintemp">{data.main.temp_min.toFixed()}</span><p className="cells"> °c</p></span> : null}</li>
+             <li className="maxtemp">{data.main ? <span><span className="name">Max</span> <span className="maxtemp">{data.main.temp_max.toFixed()}</span><p className="cells"> °c</p></span> : null}</li>
                </span>
              </ul>
              

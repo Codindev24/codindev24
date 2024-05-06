@@ -164,7 +164,7 @@ span {
 }// &.name
 
 &.feels {
- color: $nice;
+ color: $nicedd;
  font-size: 34px;
  margin-left: -10px;
 }// &.feels
@@ -194,7 +194,7 @@ span {
 }// &.name
 
 &.mintemp {
- color: $nice;
+ color: $nicedd;
  @include oxygenb;
  font-size: 34px;
  margin-left: -5px;
@@ -204,7 +204,7 @@ span {
 p.cells {
  color: rgba($color: white, $alpha: .7);
  font-size: 12px;
- margin-left: 78px !important;
+ margin-left: 38px !important;
  margin-top: -41px !important;
 }// p.cells
 
@@ -237,7 +237,7 @@ span {
 p.cells {
  color: rgba($color: white, $alpha: .7);
  font-size: 12px;
- margin-left: 79px !important;
+ margin-left: 38px !important;
  margin-top: -41px !important;
 }// p.cells
 
@@ -313,7 +313,7 @@ p.cells {
   }// &.name
   
   &.windgust {
-    color: $nice;
+    color: $nicedd;
     @include oxygenb;
     font-size: 34px;
     margin-left: -8px;
