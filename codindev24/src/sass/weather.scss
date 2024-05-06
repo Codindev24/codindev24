@@ -56,10 +56,12 @@
  .new {
 
 .adjust {
- background: rgba($color: $dark, $alpha: .7); 
+
 
  ul.iconname {
-  margin-top: 28px;
+  background: rgba($color: $dark, $alpha: .7);
+  width: 100%; 
+  padding-top: 28px;
   margin-left: -15px;
   span {// for flex
 
@@ -68,7 +70,7 @@
    &.name { ///////////// name
     color: white;
     @include oxygenb;
-    font-size: 44px;
+    font-size: 34px;
     letter-spacing: -2px;
     margin-top: -15px;
     span {
@@ -94,7 +96,12 @@
  }// ul.iconname
 
 ul.nameheatclouds {
- border-left: 3px solid white;
+background: rgba($color: $dark, $alpha: .7); 
+width: 100%;
+padding-top: 10px;
+padding-left: 0px;
+padding-right: 15px;
+border-left: 3px solid white;
 
 span {// for flex
 
@@ -115,27 +122,26 @@ li {
  padding-right: 5px;
 
 span {
- @include oxygenb;
 
 &.name {
- color: $nice;
+ color: $afd;
  font-size: 16px;
  @include textdown;
- margin-bottom: -2px;
+ letter-spacing: -1px;
+ margin-bottom: -6px;
 }// &.name
 
 &.temp {
- color: white;
- @include oxygenb;
- font-size: 64px;
+ color: $nice;
+ font-size: 34px;
  margin-left: -4px;
 
 }// span.temp
 
 p.cells {
   color: rgba($color: white, $alpha: .7);
-  margin-left: 56px !important;
-  margin-top: -75px !important;
+  margin-left: 40px !important;
+  margin-top: -44px !important;
  }// p.cells
 
 }// span
@@ -147,26 +153,26 @@ p.cells {
   padding-right: 5px;
 
 span {
- @include oxygenb;
 
 &.name {
- color: $nice;
+ color: $afd;
  font-size: 16px;
  @include textdown;
- margin-bottom: -2px;
+ letter-spacing: -1px;
+ margin-bottom: 0px;
 }// &.name
 
 &.feels {
- color: white;
- @include oxygenb;
- font-size: 64px;
+ color: $nice;
+ font-size: 34px;
  margin-left: -10px;
 }// &.feels
 
 p.cells {
  color: rgba($color: white, $alpha: .7);
- margin-left: 53px !important;
- margin-top: -75px !important;
+ @include oxygenl;
+ margin-left: 40px !important;
+ margin-top: -44px !important;
 }// p.cells
 
 }// span 
@@ -180,7 +186,7 @@ p.cells {
 span {
  color: $nice;
  @include oxygenb;
- font-size: 64px;
+ font-size: 34px;
 }// span
 
 }// &.clouds ///////////////// clouds
@@ -190,27 +196,26 @@ span {
   padding-right: 5px;
 
 span {
- @include oxygenb;
 
 &.name {
- color: $nice;
+ color: $afd;
  font-size: 16px;
  @include textdown;
- margin-bottom: 6px;
  letter-spacing: -1px;
+ margin-bottom: -9px;
 }// &.name
 
 &.wind {
- color: white;
- @include oxygenb;
- font-size: 64px;
+ color: $nice;
+ font-size: 34px;
  margin-left: -10px;
 }// &.wind
 
 p.cells {
   color: rgba($color: white, $alpha: .7);
-  margin-left: 53px !important;
-  margin-top: -75px !important;
+  @include oxygenl;
+  margin-left: 40px !important;
+  margin-top: -44px !important;
  }// p.cells
 
 }// span 
@@ -221,27 +226,25 @@ p.cells {
   padding-left: 5px;
 
 span {
- @include oxygenb;
 
  &.name {
-  color: $nice;
-  font-size: 16px;
+  color: $afd;
+  font-size: 14px;
   @include textdown;
-  margin-bottom: 6px;
   letter-spacing: -1px;
+  margin-bottom: -2px;
  }// &.name
  
  &.hum {
-  color: rgba($color: white, $alpha: .5);
-  @include oxygenb;
-  font-size: 64px;
+  color: $nice;
+  font-size: 34px;
   margin-left: -10px;
  }// &.hum
  
  p.cells {
   color: rgba($color: white, $alpha: .7);
-  margin-left: 92px !important;
-  margin-top: -75px !important;
+  margin-left: 56px !important;
+  margin-top: -44px !important;
  }// p.cells
 
 }// span
@@ -258,9 +261,12 @@ span {
 
  //////////////////////////////////////// below //////////////////////////////////////////////////
   ul.below {
+   background: rgba($color: $dark, $alpha: .7);
+   width: 100%; 
    border-left: 3px solid white;
-   padding-top: 20px;
-   padding-left: 50px;
+   padding-top: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
 
   span {// for flex
   
@@ -272,7 +278,7 @@ span {
   span {
   
   &.name {
-    color: $nice;
+    color: $afd;
     font-size: 16px;
     @include textdown;
     margin-bottom: 1px;
@@ -280,7 +286,7 @@ span {
   }// &.name
   
   &.mintemp {
-    color: white;
+    color: $nice;
     @include oxygenb;
     font-size: 34px;
     margin-left: -5px;
@@ -303,7 +309,7 @@ span {
   span {
   
   &.name {
-    color: $nice;
+    color: $afd;
     font-size: 16px;
     @include textdown;
     margin-bottom: -2px;
@@ -311,7 +317,7 @@ span {
   }// &.name
   
   &.maxtemp {
-    color: white;
+    color: $nice;
     @include oxygenb;
     font-size: 34px;
     margin-left: -8px;
@@ -334,7 +340,7 @@ span {
   span {
   
   &.name {
-    color: $nice;
+    color: $afd;
     font-size: 16px;
     @include textdown;
     margin-bottom: -2px;
@@ -342,7 +348,7 @@ span {
   }// &.name
   
   &.windgust {
-    color: white;
+    color: $nice;
     @include oxygenb;
     font-size: 34px;
     margin-left: -8px;
@@ -365,7 +371,7 @@ span {
   span {
   
   &.name {
-    color: $nice;
+    color: $afd;
     font-size: 16px;
     @include textdown;
     margin-bottom: 2px;
@@ -373,7 +379,7 @@ span {
   }// &.name
   
   &.dist {
-    color: white;
+    color: $nice;
     @include oxygenb;
     font-size: 34px;
     margin-left: -8px;
@@ -396,7 +402,7 @@ span {
   span {
   
   &.name {
-    color: $nice;
+    color: $afd;
     font-size: 16px;
     @include textdown;
     margin-bottom: 2px;
@@ -404,7 +410,7 @@ span {
   }// &.name
   
   &.sea {
-    color: white;
+    color: $nice;
     @include oxygenb;
     font-size: 34px;
     margin-left: -8px;
@@ -428,264 +434,6 @@ span {
   }// ul.below
 
   }// .adjust
- 
- ///////////////////////////// left ///////////////////////
-.left {
- padding: 5px;
- @include box;
-
-ul.nameheatclouds {
- background: gray;
- padding-bottom: 5px;
-span {
-  
-li {
- color: $dark;
- float: left;
- font-size: 18px;
- font-weight: 600;
- @include oxygenl;
-
- @include oxygenl;
- padding-right: 4px;
- padding-left: 3px;
-
-span {
- color: $dark;
-
-&.cells {
-
-span.ms {
- color: white;
- font-size: 12px;
-}// span.ms
-
-}// &.cells
-
-&.tempdata {
- color: $llpurple;
- font-size: 20px;
- font-weight: 600;
-}// &.tempdata
-
-}// span
-
-&.name {
- color:  white;
- @include oxygenb;
- font-size: 28px;
- padding-left: 5px;
-}// &.name 
-   
-&.c {
- color: rgba($color: $dark, $alpha: .8);
- @include oxygenb;
- span {
- color: white;
- @include oxygenb;
- &.tempdata {
- color: $llgreen;
- font-size: 28px;
- }// &.tempdata
- &.cels {
- color: white;
- @include oxygenl;
- }// .cels
- }// span
-}// &.c
-
-&.feels {
- color: white;
- @include oxygenb;
-
-span.feelsdata {
- color: $lblue;
- font-size: 28px;
-}// span.feelsdata
-
-}// &.feels
-
-&.snow {
- color: white;  
- @include oxygenb;
- font-size: 28px;
-
- p {
-
- }// p
-}// &,snow
-
-&.w {
- color: white;
- @include oxygenb;
-
-p {
-
-span.wind {
- color: white;
- @include oxygenb;
-
-}// span.wind
-
-span.winddata {
- color: $lblue;
- font-size: 28px;
-}// &.winddata 
-
-}// p
-
-}// &.w
-
-&.hum {
- color: $llpurple;  
- font-weight: 400;
-
-p {
-
-span.hum {
- color: white;
- @include oxygenb;
-
-}// span.hum
-
-span.numb {
-color: $lblue;
-font-size: 28px;
-}// span.numb
-
-span.perc {
-color: white;
-font-size: 12px;
-}// span.perc
-
-}// p 
-
-}// &.hum
-
-&.sun {
-
-
-span.sun {
-color: $dark;
-}// span.sun
-
-}// &.sun
-
-svg {
- width: 18px;
- height: 18px;
- margin-top: -2px;
-}// svg
-
-span.cels {
-  color: white !important;
-  @include oxygenl;
-  font-size: 12px;
-}// span.cels
-
-}// li
-  
-}// span
-  
-}// ul.nameheatclouds
-
-ul.below {
- background: gray;
- padding-top: 5px;
- border-top: 1px solid rgba($color: $llgreen, $alpha: .7);
- @include box;
-
-li {
- color: $dark;
- float: left;
- font-size: 18px;
- font-weight: 600;
- @include oxygenl;
- padding-right: 10px;
- padding-left: 10px;
-
-&.cmin {
-color: white;
-@include oxygenb;
-span.cels {
- color: white;
- @include oxygenb;
- font-size: 12px;
-} // span.cels
-
-}// .cmin
-
-&.cmax {
- color: white;
-
-span.cels {
- color: white;
-} // span.cels
-
-}// &.cmax
-
-&.sea {
-
-span {
- color: white;
-}// span
-
-}// &.sea
-
-&.windgust {
-
-p {
-
-span {
-
-&.wind {
- color: white;
-}// &.wind
-
-&.winddata {
- color: $lblue;
- @include oxygenb;
- font-size: 24px;
-}// &.winddata
-
-&.cells {
- color: white;
-}// &.cells
-
-}// span
-
-}// p
-
-}// &.windgust
-
-span {
-@include oxygenb;
-&.tempdatamin {
- color: $lblue;
- font-size: 24px;
-}// &.tempdatamin
-
-&.tempdatamax {
- color: $lblue;
- @include oxygenb;
- font-size: 24px;
- span.km {
- color: white;
- font-size: 12px;
- }// span.km
-}// &.tempdatamax
-
-&.cels {
- color: $dark;
-}// &.celd
-
-}// span
-
-}// li
- 
-}// ul.below
-
-}// .left
 
 }// .vedrid
 
