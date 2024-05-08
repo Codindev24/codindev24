@@ -3,7 +3,7 @@
 @import './base/base.scss';
 
 .notes {
-
+ 
 .notepost {
 padding-top: 20px;
 padding-bottom: 47px;
@@ -48,6 +48,20 @@ a {
 }// a
 
 }// .title
+
+ul.cats {
+ margin-top: -20px;
+
+li {
+
+span{
+ color: $nice;
+ 
+}// span
+
+}// li
+
+}// ul.cats
 
 .date {
  color: $llpurple;

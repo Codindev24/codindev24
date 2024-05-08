@@ -18,6 +18,7 @@ function Notes({ note }) {
      id,
      title,
      slug,
+     "categories": categories[]->title,
      publishedAt,
      mainImage{
       asset->{
@@ -35,7 +36,7 @@ function Notes({ note }) {
 
  return (
 
-  <div className="notes flex justify-between">
+  <div className="notesmain flex justify-between">
 
     <div className="sidebar">
      <h1>Notes</h1>
@@ -59,17 +60,9 @@ function Notes({ note }) {
 
        </div>{ /* .title */ }
 
-       <span className="note flex justify-evenly">
-
-       <span className="note">
-       Note
-       </span>{/* .note */}
-
-       <span className="id">
-       <SettingsIcon />
-       </span>{/* span.id */}
-
-       </span>{/* span.note */}
+       <ul className="cats flex justify-center">
+       <li><span>{ note.categories }</span></li>
+       </ul>
 
        <div className="date items-center text-center">
 

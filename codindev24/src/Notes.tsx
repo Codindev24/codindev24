@@ -19,6 +19,7 @@ function Notes({ note }) {
    `*[_type == "notes"]{
      title,
      slug,
+     "categories": categories[]->title,
      publishedAt,
      mainImage{
       asset->{
@@ -49,6 +50,7 @@ function Notes({ note }) {
       allNotesData.map((note, index) => ( 
 
        <li key={index}>
+        
 
        <div className="note sm:grid-cols-12">
 
@@ -59,6 +61,18 @@ function Notes({ note }) {
        <Link to={'/' + note.slug} key={note.slug}>{ note.title }</Link>
 
        </div>{ /* .title */ }
+
+       <ul className="cats flex justify-center">
+       <li><span>{ note.categories }</span></li>
+       </ul>
+
+       {/* {note.categories !== null && (
+       <ul>
+       {note.categories.map((category, i) => (
+       <li key={i}><p className='inline'>{category.title}</p></li>
+        ))}
+      </ul>
+      )} */}
 
        <div className="date items-center text-center">
 
