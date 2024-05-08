@@ -5,21 +5,30 @@
 .notesmain {
 
 .sidebar {
- padding: 10px;
+ background: $nice;
+ padding-top: 150px;
+ padding-bottom: 50px;
+ padding-left: 50px;
+ padding-right: 60px;
+ @include box;
+
 h1 {
+ color: white;
+ @include oxygenb;
  text-align: center;
 }// h1
 
 }// .sidebar
 
 
-.notes {
+.notesmain {
 
 ul.notee {
 
 li {
  background: rgba($color: $nice, $alpha: .1);
  border: 1px solid rgba($color: $nice, $alpha: .2);
+ @include box;
 }// li
 
 }// ul.notee
@@ -53,15 +62,24 @@ ul.cats {
  margin-top: -20px;
  margin-bottom: 10px;
 
-li {
+li.cats {
  background: none !important;
  border: none !important;
+ box-shadow: none;
 span{
  color: $nice;
 
+svg {
+ color: gray;
+ width: 13px;
+ height: 13px;
+ margin-right: 2px;
+ margin-top: -2px !important;
+}// scg
+
 }// span
 
-}// li
+}// li.cats
 
 }// ul.cats /// categories ////////////////////////////////////
  
@@ -103,7 +121,7 @@ span{
  
  }// .note
 
-}// .notes
+}// .notesmain
 
 .right {
 

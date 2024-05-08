@@ -4,21 +4,26 @@ import createClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import { Parallax, Background } from 'react-parallax';
-import "../sass/singlenote.scss";
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Moment from 'react-moment';
+import "../sass/singlepost.scss"
 
 const builder = imageUrlBuilder(createClient);
 function urlFor(source) {
  return builder.image(source);
 }
 
-export default function Noteslug() {
- const [noteData, setNoteData] = useState(null);
+export default function Slug() {
+ const [postData, setPostData] = useState(null);
+ const [posts, setPosts] = useState([])
  const { slug } = useParams();
 
 useEffect(() => {
  createClient.fetch(
   `*[slug.current == $slug]{
    title,
+   "categories": categories[]->title,
+   publishedAt,
    slug,
    mainImage{
     asset->{
@@ -32,11 +37,11 @@ useEffect(() => {
   }`,
   { slug }
  )
- .then((data) => setNoteData(data[0]))
+ .then((data) => setPostData(data[0]))
  .catch(console.error);
 }, [slug]);
 
-if (!noteData) return <div className="loading flex justify-center">Loading...</div>;
+if (!postData) return <div className="loading flex justify-center">Loading...</div>;
 
  return (
     <div className="defaultpost">
@@ -46,7 +51,7 @@ if (!noteData) return <div className="loading flex justify-center">Loading...</d
         <Parallax
         className="defaultpost"
         blur={0}
-        bgImage={urlFor(noteData.mainImage).url()}
+        bgImage={urlFor(postData.mainImage).url()}
         bgImageAlt="the cat"
         strength={200}
       >
@@ -55,31 +60,42 @@ if (!noteData) return <div className="loading flex justify-center">Loading...</d
      
         <div className="datax flex justify-center">
 
-          {/* <img src={urlFor(postData.authorImage).url()} alt="authorimage" /> */}
-
-           <div className="category">
-           {noteData.categories.map((c, i) => (
+        <div className="flex-none">
+        <div className="category">
+            {postData.categories.map((c, i) => (
                 <p className='inline'>{c} </p>
             ))}
-           </div>
+            {/* <span>Web Development <span className="second">improvements</span></span> */}
+            </div>
+            
+            <div className="posttitle">
+              {postData.title}
+            </div>
 
-            <div className="title">{noteData.title}</div>
+            <div className="flex justify-right">
+            <div className="authorimg">
+             <img className="rounded-full" src={urlFor(postData.authorImage).url()} alt="authorimage" />
+            </div>{/* .authorimg */}
 
-            <div className="author">{noteData.name}</div>
+            <div className="author">
+             {postData.name}
+            </div>{/* .author */}
 
-          <span>
-           {/* <BlockContent
-           blocks={postData.body}
-           projectId={createClient.clientConfig.projectId}
-           dataset={createClient.clientConfig.dataset}
-           /> */}
-           </span>
+            <div className="time">
+            <AccessTimeIcon /> {postData.publishedAt}
+            </div>{/* .time */}
+            </div>
+        </div>
 
            </div>{/* .datax */}
 
         </div>{/* .content */}
 
       </Parallax>
+
+      <div className="body flex justify-center">
+      <BlockContent blocks={postData.body} projectId="fr3rfp8i" dataset="production" />
+      </div>{/* .body */}
 
            </div>{/* .defaultpost */}
     </div>

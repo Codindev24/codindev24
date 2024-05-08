@@ -5,12 +5,13 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CandlestickChartIcon from '@mui/icons-material/CandlestickChart';
 import SettingsIcon from '@mui/icons-material/Settings';
+import CategoryIcon from '@mui/icons-material/Category';
 import 'moment-timezone';
 import "./sass/notesmain.scss";
 import { Link } from "react-router-dom";
 
 function Notes({ note }) {
- const [allNotesData, setAllNotes] = useState(null);
+ const [allPostsData, setAllPosts] = useState(null);
 
  useEffect(() => {
   createClient.fetch(
@@ -28,25 +29,25 @@ function Notes({ note }) {
      }
    }` 
   )
-  .then((data) => setAllNotes(data))
+  .then((data) => setAllPosts(data))
   .catch(console.error);
  }, []);
 
- if (!allNotesData) return <div className="loading flex justify-center">Loading...</div>;
+ if (!allPostsData) return <div className="loading flex justify-center">Loading...</div>;
 
  return (
 
   <div className="notesmain flex justify-between">
 
-    <div className="sidebar">
+    <div className="sidebar flex justify-center">
      <h1>Notes</h1>
     </div>{/* .sidebar */}
 
-    <div className="notes">
+    <div className="notesmain">
 
     <ul className="notee grid grid-cols-4 gap-2">
-     {allNotesData &&
-      allNotesData.map((note, index) => ( 
+     {allPostsData &&
+      allPostsData.map((post, index) => ( 
 
        <li key={index}>
 
@@ -56,12 +57,12 @@ function Notes({ note }) {
        {/* <a href="#" onClick={() => router.push(`/notes/${notes.slug.current}`)} key={index}>
          {notes.title}
        </a> */}
-       <Link to={'/' + note.slug} key={note.slug}>{ note.title }</Link>
+       <Link to={'/notes/' + post.slug.current} key={post.slug.current}>{ post.title }</Link>
 
        </div>{ /* .title */ }
 
        <ul className="cats flex justify-center">
-       <li><span>{ note.categories }</span></li>
+       <li className="cats"><span><CategoryIcon />{ post.categories }</span></li>
        </ul>
 
        <div className="date items-center text-center">
@@ -69,12 +70,12 @@ function Notes({ note }) {
       <div className="datetime">
        <CalendarMonthIcon/>
       <Moment format="DD/MM/YY">
-       { note.publishedAt }
+       { post.publishedAt }
        </Moment>
 
        <AccessTimeIcon/>
        <Moment format="HH:MM">
-       { note.publishedAt }
+       { post.publishedAt }
        </Moment>
         </div>{/* .datetime */}
 
@@ -87,7 +88,7 @@ function Notes({ note }) {
       ))}
       </ul>
 
-    </div>{/* .notes */}
+    </div>{/* .notesmain */}
 
     <div className="right">
 

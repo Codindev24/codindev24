@@ -5,6 +5,7 @@ import Home from './Home';
 import './sass/home.scss';
 import './sass/base/base.scss';
 import Slug from "./posts/Default.tsx";
+import Notesslug from "./notes/Default.tsx";
 import Login from "./Login";
 import Notesmain from "./Notesmain";
 import Postsmain from "./Postsmain";
@@ -20,6 +21,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:slug" element={ <Slug /> } />
+          <Route path="/notes/:slug" element={ <Slug /> } />
           <Route path="/login" element={ <Login /> } />
           <Route path="/notesmain" element={ <Notesmain /> } />
           <Route path="/postsmain" element={ <Postsmain /> } />

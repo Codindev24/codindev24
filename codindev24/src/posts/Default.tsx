@@ -15,7 +15,6 @@ function urlFor(source) {
 
 export default function Slug() {
  const [postData, setPostData] = useState(null);
- const [posts, setPosts] = useState([])
  const { slug } = useParams();
 
 useEffect(() => {

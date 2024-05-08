@@ -12,7 +12,7 @@ function urlFor(source) {
 }
 
 function Notes({ note }) {
- const [allNotesData, setAllNotes] = useState(null);
+ const [allPostsData, setAllPosts] = useState(null);
 
  useEffect(() => {
   createClient.fetch(
@@ -29,11 +29,11 @@ function Notes({ note }) {
      }
    }` 
   )
-  .then((data) => setAllNotes(data))
+  .then((data) => setAllPosts(data))
   .catch(console.error);
  }, []);
 
- if (!allNotesData) return <div className="loading flex justify-center">Loading...</div>;
+ if (!allPostsData) return <div className="loading flex justify-center">Loading...</div>;
 
  return (
 
@@ -46,8 +46,8 @@ function Notes({ note }) {
      </div>{ /* .notetitle */ }
 
      <ul className="grid grid-cols-6 gap-2">
-     {allNotesData &&
-      allNotesData.map((note, index) => ( 
+     {allPostsData &&
+      allPostsData.map((post, index) => ( 
 
        <li key={index}>
         
@@ -58,12 +58,11 @@ function Notes({ note }) {
        {/* <a href="#" onClick={() => router.push(`/notes/${notes.slug.current}`)} key={index}>
          {notes.title}
        </a> */}
-       <Link to={'/' + note.slug} key={note.slug}>{ note.title }</Link>
-
+       <Link to={'/notes/' + post.slug.current} key={post.slug.current}>{ post.title }</Link>
        </div>{ /* .title */ }
 
        <ul className="cats flex justify-center">
-       <li><span>{ note.categories }</span></li>
+       <li><span>{ post.categories }</span></li>
        </ul>
 
        {/* {note.categories !== null && (
@@ -76,7 +75,7 @@ function Notes({ note }) {
 
        <div className="date items-center text-center">
 
-       { note.publishedAt }
+       { post.publishedAt }
 
        </div>{ /* .date */ }
 
