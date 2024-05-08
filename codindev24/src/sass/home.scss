@@ -121,6 +121,12 @@
             }// svg
             }// span
             }// h1
+            p.notloggedin {
+
+              a {
+              color: $afd !important;
+              }// a
+              }// p.notloggedin
            }// right
       } // .content
     } // ..react-parallax-content

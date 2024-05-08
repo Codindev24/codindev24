@@ -60,7 +60,7 @@ export default function Home() {
           <span className="name">Codindev</span> <AccessTimeIcon /> 14:52 11 april 2024</span>
           </h1>
           {!user ? (
-          <p>You need to be logged in to view this content!</p>
+          <p className="notloggedin">You need to be logged in to view this content! <a className="text-green" href="/login">Login here..</a></p>
           ) : (  
           <div className="spanarferdslide flex">
         <div className="eventtitle">Events:</div>

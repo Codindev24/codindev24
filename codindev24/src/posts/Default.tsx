@@ -4,6 +4,7 @@ import createClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import { Parallax, Background } from 'react-parallax';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Moment from 'react-moment';
 import "../sass/singlepost.scss"
@@ -87,6 +88,43 @@ if (!postData) return <div className="loading flex justify-center">Loading...</d
         </div>
 
            </div>{/* .datax */}
+
+           <div className="bottom">
+
+           <div className=" bakk flex justify-center">
+
+          <div className="authorstuff flex">
+          <div className="auth">
+             <span>author</span>
+            </div>{/* .auth */}
+
+            <div className="authorimg">
+             <img className="" src={urlFor(postData.authorImage).url()} alt="authorimage" />
+            </div>{/* .authorimg */}
+
+            <div className="author">
+             {postData.name}
+            </div>{/* .author */}
+          </div>{/* .authorstuff */}
+
+            <div className="time flex">
+            <div className="cal">
+            <CalendarMonthIcon/>
+            <Moment className="mr-2" format="DD/MM/YY">{postData.publishedAt}</Moment>
+            </div>{/* .cal */}
+
+            <div className="clock">
+            <AccessTimeIcon /> 
+            <Moment format="HH:MM">
+            { postData.publishedAt }
+            </Moment>
+            </div>{/* .clock */}
+
+            </div>{/* .time */}
+
+            </div>
+
+           </div>{/* .bottom */}
 
         </div>{/* .content */}
 
