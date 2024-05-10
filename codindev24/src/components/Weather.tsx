@@ -2,23 +2,26 @@ import {React, useState, useEffect} from 'react';
 import axios from 'axios';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SearchIcon from '@mui/icons-material/Search';
-
+import Alert from '@mui/material/Alert';
 
 
 function Navbar() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
+  const [error, setError] = useState(Error());
+  const [alert, setAlert] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&lang=is&appid=5b3f550ce1409fd3e0696aa79e6315e6`
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
+
       axios.get(url).then((response) => {
         setData(response.data)
         console.log(response.data)
-      })
-      setLocation('')
-    }
+        setLocation('');
+      }).catch(error);}
   }
 
   // color temp numbers
@@ -45,8 +48,6 @@ function Navbar() {
           onKeyPress={searchLocation}
           placeholder='Weather search..'
           type="text" />
-
-
       </div>{/* .search */}
       </div>
 

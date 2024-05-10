@@ -6,6 +6,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import { Parallax, Background } from 'react-parallax';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import CategoryIcon from '@mui/icons-material/Category';
 import Moment from 'react-moment';
 import "../sass/singlepost.scss"
 
@@ -82,7 +83,8 @@ if (!postData) return <div className="loading flex justify-center">Loading...</d
             </div>{/* .author */}
 
             <div className="time">
-            <AccessTimeIcon /> {postData.publishedAt}
+            <AccessTimeIcon />  <Moment className="mr-2" format="DD/MM/YY">{postData.publishedAt}</Moment>
+            <AccessTimeIcon /> <Moment format="HH:MM">{postData.publishedAt}</Moment>
             </div>{/* .time */}
             </div>
         </div>
@@ -94,12 +96,17 @@ if (!postData) return <div className="loading flex justify-center">Loading...</d
            <div className=" bakk flex justify-center">
 
           <div className="authorstuff flex">
-          <div className="auth">
-             <span>author</span>
-            </div>{/* .auth */}
+
+          <div className="category">
+            <CategoryIcon/>
+            {postData.categories.map((c, i) => (
+                <p className='inline'>{c} </p>
+            ))}
+            {/* <span>Web Development <span className="second">improvements</span></span> */}
+            </div>
 
             <div className="authorimg">
-             <img className="" src={urlFor(postData.authorImage).url()} alt="authorimage" />
+             <img className="rounded-full" src={urlFor(postData.authorImage).url()} alt="authorimage" />
             </div>{/* .authorimg */}
 
             <div className="author">
