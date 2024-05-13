@@ -5,12 +5,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import Alert from '@mui/material/Alert';
 
 
-function Navbar() {
+function Weather() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
-  const [error, setError] = useState(Error());
-  const [alert, setAlert] = useState('');
-  const [errorMessage, setErrorMessage] = useState("");
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&lang=is&appid=5b3f550ce1409fd3e0696aa79e6315e6`
 
@@ -21,8 +18,8 @@ function Navbar() {
         setData(response.data)
         console.log(response.data)
         setLocation('');
-      }).catch(error);}
-  }
+      })}
+  } 
 
   // color temp numbers
   const temp = (count, number) => {
@@ -31,6 +28,13 @@ function Navbar() {
     else if (count === 0) return red;
     else if (count === 1) return yellow;
     else if (count === 10) return orange;
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setData(response.data)
+  console.log(response.data)
+  setLocation('');
 };
 
   return (
@@ -48,6 +52,7 @@ function Navbar() {
           onKeyPress={searchLocation}
           placeholder='Weather search..'
           type="text" />
+
       </div>{/* .search */}
       </div>
 
@@ -115,4 +120,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Weather

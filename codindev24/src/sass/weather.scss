@@ -57,7 +57,6 @@
 
 .adjust {
 
-
  ul.iconname {
   background: rgba($color: $dark, $alpha: .7);
   width: 100%; 
@@ -98,7 +97,7 @@
 ul.nameheatclouds {
 background: rgba($color: $dark, $alpha: .7); 
 width: 100%;
-padding-top: 5px;
+padding-top: 10px;
 padding-left: 0px;
 padding-right: 15px;
 border-left: 3px solid white;
@@ -141,8 +140,8 @@ span {
 p.cells {
   color: rgba($color: white, $alpha: .7);
   font-size: 12px;
-  margin-left: 31px !important;
-  margin-top: -41px !important;
+  margin-left: 25px !important;
+  margin-top: -54px !important;
  }// p.cells
 
 }// span
@@ -172,8 +171,8 @@ span {
 p.cells {
  color: rgba($color: white, $alpha: .7);
  font-size: 12px;
- margin-left: 35px !important;
- margin-top: -41px !important;
+ margin-left: 28px !important;
+ margin-top: -54px !important;
 }// p.cells
 
 }// span 
@@ -204,8 +203,8 @@ span {
 p.cells {
  color: rgba($color: white, $alpha: .7);
  font-size: 12px;
- margin-left: 38px !important;
- margin-top: -41px !important;
+ margin-left: 28px !important;
+ margin-top: -54px !important;
 }// p.cells
 
 }// span
@@ -237,8 +236,8 @@ span {
 p.cells {
  color: rgba($color: white, $alpha: .7);
  font-size: 12px;
- margin-left: 38px !important;
- margin-top: -41px !important;
+ margin-left: 28px !important;
+ margin-top: -54px !important;
 }// p.cells
 
 }// span
@@ -258,7 +257,7 @@ p.cells {
    background: rgba($color: $dark, $alpha: .7);
    width: 100%; 
    border-left: 3px solid white;
-   padding-top: 5px;
+   padding-top: 10px;
    padding-left: 10px;
    padding-right: 10px;
 
@@ -277,7 +276,7 @@ p.cells {
    font-size: 12px;
    @include textdown;
    letter-spacing: -1px;
-   margin-bottom: 0px;
+   margin-bottom: -1px;
    margin-right: 1px;
   }// &.name
   
@@ -291,8 +290,8 @@ p.cells {
     color: rgba($color: white, $alpha: .7);
     font-size: 12px;
     @include oxygenl;
-    margin-left: 31px !important;
-    margin-top: -42px !important;
+    margin-left: 28px !important;
+    margin-top: -54px !important;
    }// p.cells
   
   }// span 
@@ -308,13 +307,12 @@ p.cells {
     color: $afd;
     font-size: 16px;
     @include textdown;
-    margin-bottom: -2px;
+    margin-bottom: -4px;
     letter-spacing: -1px;
   }// &.name
   
   &.windgust {
     color: $nicedd;
-    @include oxygenb;
     font-size: 34px;
     margin-left: -8px;
   
@@ -322,8 +320,9 @@ p.cells {
   
   p.cells {
     color: rgba($color: white, $alpha: .7);
-    margin-left: 41px !important;
-    margin-top: -45px !important;
+    font-size: 12px;
+    margin-left: 28px !important;
+    margin-top: -54px !important;
    }// p.cells
   
   }// span
@@ -364,8 +363,8 @@ p.cells {
   p.cells {
    color: rgba($color: white, $alpha: .7);
    font-size: 12px;
-   margin-left: 51px !important;
-   margin-top: -41px !important;
+   margin-left: 28px !important;
+   margin-top: -54px !important;
   }// p.cells
  
  }// span
@@ -396,8 +395,8 @@ p.cells {
   p.cells {
     color: rgba($color: white, $alpha: .7);
     font-size: 12px;
-    margin-left: 117px !important;
-    margin-top: -41px !important;
+    margin-left: 48px !important;
+    margin-top: -54px !important;
    }// p.cells
   
   }// span
@@ -428,8 +427,8 @@ p.cells {
   p.cells {
     color: rgba($color: white, $alpha: .7);
     font-size: 12px;
-    margin-left: 88px !important;
-    margin-top: -41px !important;
+    margin-left: 48px !important;
+    margin-top: -54px !important;
    }// p.cells
   
   }// span

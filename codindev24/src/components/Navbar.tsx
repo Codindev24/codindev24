@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
+import Weatherspain from "./Weatherspain.tsx";
 
 export default function Navbar() {
   const [user, setUser] = useState({});
@@ -96,6 +97,7 @@ export default function Navbar() {
     </div>
     <div className="weatherbelow">
       <Weather />
+      {/* <Weatherspain/> */}
       </div>
     </div>
   );
