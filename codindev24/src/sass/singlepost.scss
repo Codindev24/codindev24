@@ -167,6 +167,22 @@ p {
  margin-bottom: 20px;
 }// p
 
+blockquote {
+&::before {
+ font-size: 34px;
+ content: "” ";
+ @include oxygenb;
+}// &::befor
+}// blockquote
+
+ul {
+
+li {
+ list-style-type: circle;
+}// li
+
+}// ul
+
 div {
 padding: 20px;
 
