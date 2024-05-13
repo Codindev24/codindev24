@@ -64,7 +64,7 @@ const handleSubmit = (e) => {
 
            <div className="new">
 
-            <div className="adjust flex justify-evenly">
+            <div className="adjust flex justify-evenly gap-1">
 
            <ul className="iconname">
                <span className="flex justify-center">

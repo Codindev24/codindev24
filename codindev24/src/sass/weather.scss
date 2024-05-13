@@ -5,7 +5,7 @@
 .weather {
   background: white;
   min-width:860px !important;
-  margin-top: -54px;
+  margin-top: -50px;
   padding-bottom: 6px;
   
  .search {
@@ -58,10 +58,12 @@
 .adjust {
 
  ul.iconname {
-  background: rgba($color: $dark, $alpha: .7);
+  background: rgba($color: $dark, $alpha: .9);
   width: 100%; 
   padding-top: 20px;
   margin-left: -15px;
+  @include box;
+
   span {// for flex
 
    li {
@@ -72,6 +74,7 @@
     font-size: 34px;
     letter-spacing: -2px;
     margin-top: -15px;
+
     span {
 
     }// span
@@ -95,12 +98,16 @@
  }// ul.iconname
 
 ul.nameheatclouds {
-background: rgba($color: $dark, $alpha: .7); 
+background: rgba($color: $dark, $alpha: .9); 
 width: 100%;
 padding-top: 10px;
 padding-left: 0px;
 padding-right: 15px;
 border-left: 3px solid white;
+
+&:hover {
+ background: $dark;
+}// &:hover 
 
 span {// for flex
 
@@ -254,12 +261,17 @@ p.cells {
 
  //////////////////////////////////////// below //////////////////////////////////////////////////
   ul.below {
-   background: rgba($color: $dark, $alpha: .7);
+   background: rgba($color: $dark, $alpha: .9);
    width: 100%; 
    border-left: 3px solid white;
    padding-top: 10px;
    padding-left: 10px;
    padding-right: 10px;
+   @include box;
+
+&:hover {
+ background: $dark;
+}// &:hover 
 
   span {// for flex
   
