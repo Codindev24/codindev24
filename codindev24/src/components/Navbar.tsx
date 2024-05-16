@@ -12,6 +12,8 @@ import {
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Weatherspain from "./Weatherspain.tsx";
+import SettingsIcon from '@mui/icons-material/Settings';
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function Navbar() {
   const [user, setUser] = useState({});
@@ -65,9 +67,6 @@ export default function Navbar() {
                 </li>
               </ul>
             </li>
-            <li>
-              <a>Contact</a>
-            </li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
@@ -92,7 +91,26 @@ export default function Navbar() {
         <span className="email"><PersonIcon />{user?.email}</span>
       </div>
       )}
-      <div><button className="signout" onClick={logout}><LogoutIcon />SignOut</button></div>
+      <div className="signout">
+        
+      <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <SettingsIcon/>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 absolute z-20"
+          >
+            <li>
+              <a href="/login" onClick={logout}><LogoutIcon />Signout</a>
+            </li>
+            <li>
+              <a><EmailIcon/>Contact</a>
+            </li>
+          </ul>
+        </div>
+        </div>{/* .signout */}
+
       </div>{/* .navbar-end */}
     </div>
     <div className="weatherbelow">
